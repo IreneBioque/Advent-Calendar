@@ -9,7 +9,7 @@ const WorkList = (props) => {
   });
   return (
     <div>
-      <h2 className='section__title'>Mis Proyectos</h2>
+      <h2 className='section__title'>Calendario</h2>
       <section id='work'>
         <ul className='section_proyects'>{list}</ul>
       </section>
