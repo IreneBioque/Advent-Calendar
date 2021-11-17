@@ -1,0 +1,31 @@
+// .hoverarea{
+//     background-color: red;
+// }
+
+// .section__work--image{
+//          opacity: 0;
+//          transition: opacity 2s;
+// }
+
+//   .section__work--image:hover {
+//    opacity: 1;  
+//   }
+
+.hoverarea{
+    background-color: red;
+    // width: 500px;
+    // height: 500px;
+}
+
+.section__work--image{
+  // max-height: 500px;
+  // max-width: 500px;
+         opacity: 0;
+         transition: opacity 2s;
+}
+
+  .section__work--image:hover {
+   opacity: 1;  
+  }
+
+ 
