@@ -3,6 +3,7 @@ import {  useState, useEffect } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 
 import '../styles/App.scss';
+import Landing from './Landing';
 import Header from './Header';
 import WorkList from './WorkList';
 import WorkDetail from './WorkDetail';
@@ -32,23 +33,26 @@ const App = () => {
   );
   return (
     <div>
-      <Header />
-      <main className="main">
-        <Switch>
-          <Route path="/" exact>
+      <Switch>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+        <Route exact path="/calendar">
+          <Header />
+          <main className="main">
             <WorkList data={datafiltered} />
-          </Route>
+          </main>
+        </Route>
 
-          <Route path="/proyect/:id">
-            <section className="characterDetail">
-              <WorkDetail proyect={selectedProyect} />
-            </section>
-          </Route>
-          <Route>
-            <NotFoundPage data={datafiltered}  />
-          </Route>
-        </Switch>
-      </main>
+        <Route path="/proyect/:id">
+          <section className="characterDetail">
+            <WorkDetail proyect={selectedProyect} />
+          </section>
+        </Route>
+        <Route>
+          <NotFoundPage data={datafiltered} />
+        </Route>
+      </Switch>
 
       {/* <Footer /> */}
     </div>
