@@ -5,9 +5,10 @@ const NotFoundPage = () => {
   return (
     <div className="notFoundPage">
       <p className="notFoundPage__text">
-        Página no encontrada. No vayas tan rápido todavía no es el día. Tendrás que esperar un poco más
+        Página no encontrada. No vayas tan rápido todavía no es el día. Tendrás
+        que esperar un poco más
       </p>
-      <Link to="/">
+      <Link to="/calendar">
         <p>Vuelve atrás</p>
       </Link>
     </div>

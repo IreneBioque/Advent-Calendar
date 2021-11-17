@@ -1,5 +1,14 @@
 
 .section_proyects{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+      @media all and (min-width: 1200px) {
+  grid-template-columns: repeat(2, 1fr);
+  }
+
+   
 }
+// .main{
+//      background-image: url('../../images/papelNavidad.png');
+//      background-size: cover;
+// }

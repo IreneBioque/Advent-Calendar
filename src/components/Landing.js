@@ -8,6 +8,8 @@ const Landing = () => {
       <Link to="/calendar">
         <button>Ir al calendario</button>
       </Link>
+
+
     </>
   );
 };

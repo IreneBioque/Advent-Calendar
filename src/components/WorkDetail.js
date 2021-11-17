@@ -10,7 +10,7 @@ const WorkDetail = (props) => {
      return (
        <div className="detail" key={props.proyect.id}>
          <h1 className="titleDetail">{props.proyect.name}</h1>
-         <Link to="/">
+         <Link to="/calendar">
            <p className="Link">
              <i className="fas fa-arrow-left arrow"></i>Volver atrás
            </p>
