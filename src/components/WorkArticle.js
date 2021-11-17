@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/layout/_workArticle.scss";
-import loco from "../images/donde-vas-loco.jpg";
+import navidad from "../images/papelNavidad.png";
 import no from "../images/NO.jpg";
 const WorkArticle = (props) => {
   const [tech, setTech] = useState('listTech');
