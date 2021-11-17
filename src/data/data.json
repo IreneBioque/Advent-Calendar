@@ -66,6 +66,17 @@
       "github": "https://github.com/IreneBioque/web-layout",
       "page": "https://irenebioque.github.io/web-layout/",
       "descripcion": "Prueba 6"
+    },
+      {
+      "id": 7,
+       "day": false,
+      "name": "Dia 7",
+      "img": "https://thumbs.dreamstime.com/b/peque%C3%B1a-raza-brit%C3%A1nicos-del-gatito-72029589.jpg",
+      "tech": ["Prueba 7", "Prueba 7", "Prueba 7"],
+      "about": "Prueba 7",
+      "github": "https://github.com/IreneBioque/web-layout",
+      "page": "https://irenebioque.github.io/web-layout/",
+      "descripcion": "Prueba 7"
     }
   ]
 }
