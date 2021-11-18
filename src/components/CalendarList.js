@@ -1,5 +1,4 @@
 import DayArticle from "./DayArticle";
-import { Link } from "react-router-dom";
 const CalendarList = (props) => {
   const list = props.data.map((day) => {
     return (
