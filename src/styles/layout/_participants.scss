@@ -1,0 +1,7 @@
+.participantList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__element{
+        padding: 5px;
+    }
+}
