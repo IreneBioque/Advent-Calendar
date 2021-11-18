@@ -30,8 +30,8 @@
 }
 .box-body {
   position: relative;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   margin-top: 123.3333333333px;
   background-color: #cc231e;
   border-bottom-left-radius: 5%;
@@ -92,7 +92,7 @@
   height: 40px;
   background-color: #cc231e;
   height: 40px;
-  width: 220px;
+  width: 120px;
   border-radius: 5%;
   box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.3);
 }
@@ -113,8 +113,8 @@
 }
 .box-bowtie::before, .box-bowtie::after {
   content: "";
-  width: 83.3333333333px;
-  height: 83.3333333333px;
+  width: 33.3333333333px;
+  height: 33.3333333333px;
   border: 16.6666666667px solid white;
   border-radius: 50% 50% 0 50%;
   position: absolute;
