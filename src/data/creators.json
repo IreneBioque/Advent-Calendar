@@ -1,0 +1,37 @@
+{
+  "creators": [
+    {
+      "id": 1,
+      "name": "Ariadna",
+      "img": "https://pbs.twimg.com/profile_images/1453367404713627650/VkrR6d6B_400x400.jpg",
+      "twitter": "https://twitter.com/arimagic",
+      "job": "FullStack Developer"
+
+    },
+    {
+      "id": 2,
+      "name": "Irene",
+      "img": "https://pbs.twimg.com/profile_images/1372473722033037312/P7GG9uOA_400x400.jpg",
+      "twitter": "https://twitter.com/Irenillab",
+       "job": "Front-End Developer"
+
+    },
+    {
+      "id": 3,
+      "name": "Jose",
+      "img": "https://pbs.twimg.com/profile_images/1369391669041315849/ZcX18E1g_400x400.jpg",
+      "twitter": "https://twitter.com/RollAndRol_",
+      "job": "CEO & Comunnity Manager"
+
+    },
+
+    {
+      "id": 4,
+      "name": "Manu",
+      "img": "https://pbs.twimg.com/profile_images/1443155168263028737/y5caRrG9_400x400.jpg",
+      "twitter": "https://twitter.com/GarriManu",
+      "job": "Back-End Developer"
+
+    }
+  ]
+}
