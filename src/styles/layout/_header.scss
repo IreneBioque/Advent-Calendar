@@ -1,11 +1,15 @@
 .header {
-    margin: 20px 10px;
-     &__title{
-        font-size: 40px;
-        text-align: center;
-    }  
-        &__paragraph{
-        position: relative;
-        left: 20px;
-    } 
+display: flex;
+justify-content: space-around;
+margin: 20px;
+&__title{
+    font-size: 30px;
+}
+&__list{
+    display: flex;
+    align-items: flex-end;
+    &--element{
+        padding: 0 10px;
+    }
+}
 }
