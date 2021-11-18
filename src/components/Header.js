@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <header className="header">Calendario de adviento rolero</header>
-      <Link to="/">
-        <p>Atrás</p>
-      </Link>
+      <header className="header">
+        <h1 className="header__title">Calendario de adviento rolero</h1>
+        <Link to="/" className="header__paragraph">
+        Atrás
+        </Link>
+      </header>
     </>
   );
 };

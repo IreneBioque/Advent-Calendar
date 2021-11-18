@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-
+import HeaderLanding from "./HeaderLanding";
 
 const Landing = () => {
   return (
     <>
-      <p>Bienvenido al calendario rolero</p>
+      <HeaderLanding/>
+      <h1>Bienvenido al calendario rolero</h1>
       <Link to="/calendar">
         <button>Ir al calendario</button>
       </Link>
