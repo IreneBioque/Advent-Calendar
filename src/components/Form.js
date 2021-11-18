@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "@formspree/react";
 import "../styles/layout/_form.scss";
-const Form = () => {
+const Form = (props) => {
     const [state, handleSubmit] = useForm("xoqygybv");
     if (state.succeeded) {
         return (
@@ -11,7 +11,17 @@ const Form = () => {
             <Link to="/calendar">Volver a atrás</Link>
           </div>
         );
-     }
+  }
+  const creators = props.data.map((creator) => {
+    return (
+      <article>
+        <img src={creator.img} alt={creator.name} />
+        <a href={creator.twitter} target="_blank" rel="noreferrer">
+          <i className="fab fa-twitter"></i>
+        </a>
+      </article>
+    );
+  })
   return (
     <>
       <header className="headerForm">
@@ -68,57 +78,7 @@ const Form = () => {
           Si prefieres ponerte en contacto con nosotros por Twitter te dejamos
           aquí abajo nuestros perfiles
         </p>
-        <div>
-          <article>
-            <img
-              href="https://pbs.twimg.com/profile_images/1453367404713627650/VkrR6d6B_400x400.jpg"
-              alt="imageAri "
-            />
-            <a
-              href="https://twitter.com/arimagic"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-          </article>
-          <article>
-            <img href="https://pbs.twimg.com/profile_images/1372473722033037312/P7GG9uOA_400x400.jpg" alt="imageIrene" />
-            <a
-              href="https://twitter.com/Irenillab"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-          </article>
-          <article>
-            <img
-              href="https://pbs.twimg.com/profile_images/1369391669041315849/ZcX18E1g_400x400.jpg"
-              alt="imageJose"
-            />
-            <a
-              href="https://twitter.com/RollAndRol_"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-          </article>
-          <article>
-            <img
-              href="https://pbs.twimg.com/profile_images/1443155168263028737/y5caRrG9_400x400.jpg"
-              alt="imageManu"
-            />
-            <a
-              href="https://twitter.com/GarriManu"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-          </article>
-        </div>
+        <div>{creators}</div>
       </section>
     </>
   );
