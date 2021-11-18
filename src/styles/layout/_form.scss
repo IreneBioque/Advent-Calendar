@@ -1,0 +1,30 @@
+.headerForm{
+    margin: 10px;
+    &__title{
+        font-size: 40px;
+        text-align: center;
+    }
+    &__link{
+        position: relative;
+        left: 20px;
+    }
+}
+
+
+.form{
+    display: grid;
+    margin: 0 20px;
+    &__label{
+        margin: 5px 0;
+    }
+    &__input{
+        padding: 5px;
+    }
+    &__button{
+        margin: 10px 0;
+        width: 100px;
+    }
+}
+.contact{
+    margin: 20px;
+}
