@@ -5,13 +5,15 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import '../styles/App.scss';
 import Landing from './Landing';
 import Header from './Header';
-import WorkList from './WorkList';
-import WorkDetail from './WorkDetail';
+import CalendarList from './CalendarList';
+import DayDetail from "./DayDetail";
 import Data from '../data/data.json';
 import NotFoundPage from './NotFoundPage'
+import Form from './Form';
+import Footer from './Footer';
 const App = () => {
   const [data, setData] = useState(Data);
-  const datafiltered = data.proyects
+  const datafiltered = data.days
     .map((data) => {
       return {
         id: data.id,
@@ -26,10 +28,10 @@ const App = () => {
       };
     });
 
-  const routeData = useRouteMatch('/proyect/:id');
-  const ProyectId = routeData !== null ? routeData.params.id : '';
-  const selectedProyect = datafiltered.find(
-    (proyect) => proyect.id === parseInt(ProyectId)
+  const routeData = useRouteMatch('/day/:id');
+  const DayId = routeData !== null ? routeData.params.id : '';
+  const selectedDay = datafiltered.find(
+    (day) => day.id === parseInt(DayId)
   );
   return (
     <div>
@@ -40,21 +42,23 @@ const App = () => {
         <Route exact path="/calendar">
           <Header />
           <main className="main">
-            <WorkList data={datafiltered} />
+            <CalendarList data={datafiltered} />
           </main>
+          <Footer/>
         </Route>
 
-        <Route path="/proyect/:id">
-          <section className="characterDetail">
-            <WorkDetail proyect={selectedProyect} />
+        <Route path="/day/:id">
+          <section>
+            <DayDetail day={selectedDay} />
           </section>
+        </Route>
+        <Route exact path="/form">
+          <Form />
         </Route>
         <Route>
           <NotFoundPage data={datafiltered} />
         </Route>
       </Switch>
-
-      {/* <Footer /> */}
     </div>
   );
 };
