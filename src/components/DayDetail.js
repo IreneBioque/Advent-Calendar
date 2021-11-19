@@ -53,12 +53,6 @@ const DayDetail = (props) => {
   } else if (props.day.day !== true) {
     return (
       <ModalWindow title={"Todavía no es el día"}>
-        <div className="no_found_img_container">
-          <img
-            src={no}
-            alt="pruebalmodal"
-          />
-        </div>
       </ModalWindow>
     );
   } else {
