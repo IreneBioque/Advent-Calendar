@@ -12,8 +12,8 @@ const Landing = () => {
           <li><Link to="/creators">Creadores</Link></li>
         </ul>
       </header>
-      <div className="main">
-        <div className="video">
+      <div className="landing__main">
+        <div className="landing__video">
           <video src="">
             Su navegador no puede reproducir vídeos
           </video>
