@@ -1,18 +1,21 @@
 import { Link } from "react-router-dom";
 import "../styles/layout/_modalwindow.scss";
+import no from "../images/NO.jpg";
 
 function ModalWindow(props) {
   return (
     <div className="modal">
-      <div className="modal__dialog">
+      <div className="modal__page">
         <div className="modal__content">
-          <header className="modal__header">
-            <h2 className="modal__title">{props.title}</h2>
+          <header className="modalHeader">
+            <h2 className="modalHeader__title">{props.title}</h2>
             <Link to="/calendar">
-              <span className="modal__close icon fas fa-times"></span>
+              <i class="far fa-times-circle modalHeader__close"></i>
             </Link>
           </header>
-          <section>{props.children}</section>
+          <article>
+            <img src={no} alt="notday" className="modal__img" />
+          </article>
         </div>
       </div>
     </div>
