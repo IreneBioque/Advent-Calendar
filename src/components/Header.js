@@ -17,6 +17,9 @@ const Header = () => {
         <li className="header__list--element">
           <Link to="/creators">Creadores</Link>
         </li>
+        <li className="header__list--element">
+          <Link to="/form">Formulario</Link>
+        </li>
       </ul>
     </header>
   );
