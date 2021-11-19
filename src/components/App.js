@@ -6,7 +6,7 @@ import Landing from './Landing';
 import Header from './Header';
 import CalendarList from './CalendarList';
 import DayDetail from "./DayDetail";
-import Data from '../data/data.json';
+import { Data } from '../data/data';
 import NotFoundPage from './NotFoundPage'
 import Form from './Form';
 import Footer from './Footer';
@@ -16,23 +16,10 @@ import Creators from "./Creators"
 import JsonCreators from "../data/creators.json"
 const App = () => {
   const [data] = useState(Data);
-  const datafiltered = data.days.map((data) => {
-    return {
-      id: data.id,
-      day: data.day,
-      name: data.name,
-      img: data.img,
-      tech: data.tech,
-      about: data.about,
-      github: data.github,
-      page: data.page,
-      description: data.descripcion,
-    };
-  });
 
   const routeData = useRouteMatch("/day/:id");
   const DayId = routeData !== null ? routeData.params.id : "";
-  const selectedDay = datafiltered.find((day) => day.id === parseInt(DayId));
+  const selectedDay = data.find((day) => day.id === parseInt(DayId));
   // Datos participantes
   const [dataParticipants] = useState(JsonParticipants);
   const datafilteredParticipants = dataParticipants.participants.map((data) => {
@@ -65,7 +52,7 @@ const App = () => {
         <Route exact path="/calendar">
           <Header />
           <main className="main">
-            <CalendarList data={datafiltered} />
+            <CalendarList data={data} />
           </main>
           <Footer />
         </Route>
@@ -85,7 +72,7 @@ const App = () => {
           <Creators datafiltered={datafilteredCreators} />
         </Route>
         <Route>
-          <NotFoundPage data={datafiltered} />
+          <NotFoundPage data={data} />
         </Route>
       </Switch>
     </div>

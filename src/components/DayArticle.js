@@ -5,9 +5,6 @@ import no from "../images/NO.jpg";
 import "../styles/layout/_gift.scss";
 const DayArticle = (props) => {
   const [tech, setTech] = useState('listTech');
-  const technologies = props.data.tech.map((data, i) => {
-    return <li className={tech} key={i}>{data}</li>;
-  });
   const handleTech = () => {
     setTech('listTech2');
   };
@@ -26,7 +23,7 @@ const DayArticle = (props) => {
                   <img
                     class="img"
                     src={
-                      props.data.day === true
+                      props.data.id === 1
                         ? props.data.img
                         : no
                     }
