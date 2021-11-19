@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.1ce0857a.chunk.css",
-    "main.js": "./static/js/main.90b581d2.chunk.js",
-    "main.js.map": "./static/js/main.90b581d2.chunk.js.map",
+    "main.css": "./static/css/main.ee0941db.chunk.css",
+    "main.js": "./static/js/main.08e69fa7.chunk.js",
+    "main.js.map": "./static/js/main.08e69fa7.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.3976f0fa.js",
     "runtime-main.js.map": "./static/js/runtime-main.3976f0fa.js.map",
-    "static/js/2.19601d5c.chunk.js": "./static/js/2.19601d5c.chunk.js",
-    "static/js/2.19601d5c.chunk.js.map": "./static/js/2.19601d5c.chunk.js.map",
+    "static/js/2.24b9abb4.chunk.js": "./static/js/2.24b9abb4.chunk.js",
+    "static/js/2.24b9abb4.chunk.js.map": "./static/js/2.24b9abb4.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.1ce0857a.chunk.css.map": "./static/css/main.1ce0857a.chunk.css.map",
-    "static/js/2.19601d5c.chunk.js.LICENSE.txt": "./static/js/2.19601d5c.chunk.js.LICENSE.txt",
+    "static/css/main.ee0941db.chunk.css.map": "./static/css/main.ee0941db.chunk.css.map",
+    "static/js/2.24b9abb4.chunk.js.LICENSE.txt": "./static/js/2.24b9abb4.chunk.js.LICENSE.txt",
     "static/media/NO.763d2f4f.jpg": "./static/media/NO.763d2f4f.jpg",
     "static/media/_gift.scss": "./static/media/papelNavidad.63b803e6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3976f0fa.js",
-    "static/js/2.19601d5c.chunk.js",
-    "static/css/main.1ce0857a.chunk.css",
-    "static/js/main.90b581d2.chunk.js"
+    "static/js/2.24b9abb4.chunk.js",
+    "static/css/main.ee0941db.chunk.css",
+    "static/js/main.08e69fa7.chunk.js"
   ]
 }
