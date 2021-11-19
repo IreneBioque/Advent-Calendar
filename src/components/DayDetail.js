@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import '../styles/layout/_workDetail.scss';
 import NotFoundPage from "./NotFoundPage";
-
-const WorkDetail = (props) => {
+import ModalWindow from "./ModalWindow";
+import no from "../images/NO.jpg";
+const DayDetail = (props) => {
   const technologies = props.day.tech.map((data) => {
     return <li>{data}</li>;
   });
@@ -49,9 +50,20 @@ const WorkDetail = (props) => {
          </div>
        </div>
      );
+  } else if (props.day.day !== true) {
+    return (
+      <ModalWindow title={"Todavía no es el día"}>
+        <div className="no_found_img_container">
+          <img
+            src={no}
+            alt="pruebalmodal"
+          />
+        </div>
+      </ModalWindow>
+    );
   } else {
-    return <NotFoundPage />;
+ return <NotFoundPage />;
   }
  
 };
-export default WorkDetail;
+export default DayDetail;
