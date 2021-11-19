@@ -59,7 +59,6 @@ const App = () => {
     <div>
       <Switch>
         <Route exact path="/">
-          <Header />
           <Landing />
         </Route>
         <Route exact path="/calendar">
