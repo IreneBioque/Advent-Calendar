@@ -5,7 +5,7 @@ const Landing = () => {
     <>
       {/* Lo dejo preparado para el flex */}
       <header>
-        <h1>¡Bienvenido al calendario de adviento rolero!</h1>
+        <h1>¡Te damos la bienvenida al calendario de adviento rolero!</h1>
         <ul>
           <li><Link to="/form">Formulario de contacto</Link></li>
           <li><Link to="/participants">Participantes</Link></li>
