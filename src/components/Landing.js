@@ -5,10 +5,12 @@ const Landing = () => {
     <>
       {/* Lo dejo preparado para el flex */}
       <header>
-        <Link to="/form"><button>Formulario de contacto</button></Link>
         <h1>¡Bienvenido al calendario de adviento rolero!</h1>
-        <Link to="/participants"><button>Participantes</button></Link>
-        <Link to="/creators"><button>Creadores</button></Link>
+        <ul>
+          <li><Link to="/form">Formulario de contacto</Link></li>
+          <li><Link to="/participants">Participantes</Link></li>
+          <li><Link to="/creators">Creadores</Link></li>
+        </ul>
       </header>
       <div className="main">
         <div className="video">
