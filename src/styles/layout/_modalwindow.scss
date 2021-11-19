@@ -5,44 +5,36 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #eeec;
-  .modal__dialog {
+  &__page {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    .modal__content {
-      padding: 1rem;
-      border-radius: 0.5rem;
-      background-color: black;
-      width: 50%;
-      @media all and (max-width: 1200px) {
-        width: 80%;
       }
-      .modal__header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid red;
-        .modal__title {
-          color: white;
+  &__img{
+    width: 80%;
+  }    
+    }
+  .modal__content {
+    padding: 1rem;
+    background-color: black;
+    width: 50%;
+  }
+  .modalHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid red;
+    &__title{
+      color: white;
+      font-size: 30px;
+    }
+    &__close{
           font-size: 30px;
-        }
-        .modal__close {
-          padding: 6px 9px 6px 9px;
-          background-color: white;
-          border-radius: 50%;
-          font-size: 20px;
-          border: solid 2px black;
-          color: black;
-        }
-         .modal__close:hover {
-           box-shadow: 0 0 2px 2px white;
-           border-color: red;
+          color: white;
+          &:hover{
            color: red;
-         }
-      }
+          }
     }
   }
-}
