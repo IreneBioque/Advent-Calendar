@@ -1,20 +1,33 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Modal, Button } from 'react-bootstrap';
 import "../styles/layout/_workArticle.scss";
 import no from "../images/NO.jpg";
 import "../styles/layout/_gift.scss";
+
 const DayArticle = (props) => {
+  // TODO: ADD USE STATE TO SAVE PRESENT TO SHOW TO MODAL
   const [tech, setTech] = useState('listTech');
+  const [show, setShow] = useState(false);
+
   const handleTech = () => {
     setTech('listTech2');
   };
+
   const handleTechOut = () => {
     setTech('listTech');
   };
+
+  const showModal = () => setShow(true);
+
+  const closeModal = () => setShow(false);
+
+  // TODO: ADD USE EFFECT TO REQUEST TO API
+
   return (
     <article>
+      <div className='presentCard'>
       <h3>{props.data.name}</h3>
-      <Link to={`./day/${props.data.id}`}>
+      <div onClick={showModal}>
         <div className="container">
           <div class="row">
             <div class="div1">
@@ -49,7 +62,14 @@ const DayArticle = (props) => {
           />
         </div> */}
         {/* <ul className='tech_over'>{technologies}</ul> */}
-      </Link>
+      </div>
+      </div>
+      <Modal show={show} onHide={closeModal} id='modal'>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+      </Modal>
     </article>
   );
 };

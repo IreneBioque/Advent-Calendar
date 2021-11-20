@@ -14,6 +14,8 @@ import Participants from "./Participants";
 import JsonParticipants from "../data/participants.json";
 import Creators from "./Creators"
 import JsonCreators from "../data/creators.json"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () => {
   const [data] = useState(Data);
 
