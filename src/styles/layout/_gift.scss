@@ -1,4 +1,36 @@
 
+article {
+  position: relative;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  background-image: url('../../images/tree.jpg');
+  background-size: cover;
+  border: solid white 3px;
+  border-radius: 1rem;
+
+  .presentCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    height: 100%;
+    border-radius: 1rem;
+  }
+
+  h3 {
+    color: white;
+    margin-top: 1rem;
+  }  
+}
+
+#modal {
+  max-width: 850px !important;
+  .modal-content {
+    height: 40rem;
+  }
+}
+
 
 .box {
   position: relative;
@@ -7,27 +39,21 @@
   display: flex;
   justify-content: center;
 }
-.container {
-  margin: 60px;
-}
+
 .img{
   height: 100px;
 }
+
 .box::before {
   content: "";
-  width: 440px;
-  height: 440px;
-   background-color: #89cff0;
-   background-image: url('../../images/papelNavidad.png');
   background-size: cover;
-  position: absolute;
   z-index: -1;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  //  border-radius: 50%;
+    transform: translate(-50%, -50%);
 }
+
 .box-body {
   position: relative;
   height: 100px;
