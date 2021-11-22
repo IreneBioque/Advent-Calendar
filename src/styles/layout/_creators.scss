@@ -1,0 +1,47 @@
+.creators__header{
+    margin: 20px;
+    &--title{
+        text-transform: uppercase;
+        font-size: 25px;
+        @media (min-width: 768px) {
+            font-size: 40px;
+           text-align: center;
+        }
+    }
+}
+
+.creators__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listCreators{
+    display: grid;
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__element{
+        margin: 20px;
+        &--text{
+           text-transform: capitalize;
+           margin: 5px 0;
+           font-size: 20px;
+        }
+        &--img{
+            height: 350px;
+        }
+        &--div{
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+            width: 350px ;
+        }
+    }
+}
+
+.fab{
+    font-size: 20px;
+    padding: 10px ;
+}
