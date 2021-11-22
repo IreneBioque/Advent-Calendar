@@ -1,6 +1,7 @@
 // Fichero src/components/App.js
 import {  useState, useEffect } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/App.scss';
 import Landing from './Landing';
 import Header from './Header';
@@ -14,7 +15,8 @@ import Participants from "./Participants";
 import JsonParticipants from "../data/participants.json";
 import Creators from "./Creators"
 import JsonCreators from "../data/creators.json"
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 const App = () => {
   const [data] = useState(Data);
