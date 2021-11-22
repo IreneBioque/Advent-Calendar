@@ -1,0 +1,23 @@
+.landing__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    &--title{
+        font-size: 30px;
+        padding: 10px;
+    }
+    &--list{
+        display: flex;
+       &__element{
+        padding: 10px;
+       }
+    }
+}
+.landing__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
