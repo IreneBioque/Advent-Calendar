@@ -56,7 +56,7 @@ export const Data = [
   },
   {
     "id": 6,
-    "name": "Dia 1",
+    "name": "Dia 6",
     "img": process.env.REACT_APP_DAY_6_IMAGE,
     "author": "Mamahuevos",
     "twitter": 'fgdgdgdg',

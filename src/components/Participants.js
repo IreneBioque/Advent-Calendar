@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-
-import { useState } from 'react';
 import "../styles/layout/_participants.scss";
 const Participants = (props) => {
   const list = props.datafiltered.map((participant) => {

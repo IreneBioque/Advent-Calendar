@@ -1,21 +1,15 @@
 import { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import "../styles/layout/_workArticle.scss";
 import no from "../images/NO.jpg";
 import "../styles/layout/_gift.scss";
 
 const DayArticle = (props) => {
   // TODO: ADD USE STATE TO SAVE PRESENT TO SHOW TO MODAL
-  const [tech, setTech] = useState('listTech');
+ 
   const [show, setShow] = useState(false);
 
-  const handleTech = () => {
-    setTech('listTech2');
-  };
 
-  const handleTechOut = () => {
-    setTech('listTech');
-  };
 
   const showModal = () => setShow(true);
 
@@ -50,18 +44,6 @@ const DayArticle = (props) => {
             </div>
           </div>
         </div>
-
-        {/* <p className='section__work--parrafo'>{props.data.about}</p> */}
-        {/* <div className="hoverarea">
-          <img
-            src={props.data.day === true ? props.data.img : no}
-            alt={props.data.name}
-            className="section__work--image"
-            onMouseOver={handleTech}
-            onMouseLeave={handleTechOut}
-          />
-        </div> */}
-        {/* <ul className='tech_over'>{technologies}</ul> */}
       </div>
       </div>
       <Modal show={show} onHide={closeModal} id='modal'>
