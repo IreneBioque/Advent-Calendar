@@ -1,12 +1,72 @@
-@import './../core/variables';
+@import "./../core/variables";
 
-.modal__ModalTitle{
-text-align: center;
-font-family: $fonttitle;
+.modal__ModalTitle {
+  font-size: larger;
+  font-weight: bold;
+  font-family: $fonttitle;
 }
-.modal__rrss span{
-  color: #00acee;
-}
-.modal__download{
 
+.modal__container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  align-content: stretch;
+  justify-content: stretch;
+  justify-items: stretch;
+}
+
+.modal__header {
+  place-self: center stretch;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.modal__image {
+  place-self: center stretch;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.modal__title {
+  place-self: center stretch;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.modal__description {
+  place-self: center stretch;
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}
+
+.modal__download {
+  place-self: center;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  button {
+
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  button:hover {
+    background-color: black;
+    a {
+      color: white;
+    }
+  }
+}
+
+.modal__rrss {
+  place-self: center;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  span {
+    color: #00acee;
+  }
 }

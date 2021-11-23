@@ -8,18 +8,20 @@ const ModalWindow = ({ show, closeModal, data }) => {
     <Modal show={show} onHide={closeModal} id='modal'>
       <Modal.Header closeButton>
         <Modal.Title>
-        <h1 className="modal__ModalTitle">Día {data.day}</h1>
+          <h1 className="modal__ModalTitle">Día {data.day}</h1>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h1 className="modal__header">Hoy tenemos un regalo de {data.autor} {`(${data.pronombres})`}</h1>
-        <div><img src={data.image} alt="Imagen del regalo"></img></div>
-        <br></br>
-        <h2 className="modal__title">Se trata de {data.title}</h2>
-        <h3 className="modal__description">{data.description}</h3>
-        <br></br>
-        <h3 className="modal__download"><button><a href={data.file}>Descarga del material</a></button></h3>
-        <h3 className="modal__rrss"><span className="fab fa-twitter"></span> {data.twitter}</h3>
+        <div className="modal__container">
+          <h1 className="modal__header">Hoy tenemos un regalo de {data.autor} {`(${data.pronombres})`}</h1>
+          <div className="modal__image"><img src={data.image} alt="Imagen del regalo"></img></div>
+          <br></br>
+          <h2 className="modal__title">Se trata de {data.title}</h2>
+          <h3 className="modal__description">{data.description}</h3>
+          <br></br>
+          <h3 className="modal__download"><button><a target="_blank" href={data.file}>Descarga del material</a></button></h3>
+          <h3 className="modal__rrss"><span className="fab fa-twitter"></span><a href={data.twitter}>{data.autor}</a></h3>
+        </div>
       </Modal.Body>
     </Modal>
   );
