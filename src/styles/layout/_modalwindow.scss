@@ -1,40 +1,12 @@
+@import './../core/variables';
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  &__page {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      }
-  &__img{
-    width: 80%;
-  }    
-    }
-  .modal__content {
-    padding: 1rem;
-    background-color: black;
-    width: 50%;
-  }
-  .modalHeader{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid red;
-    &__title{
-      color: white;
-      font-size: 30px;
-    }
-    &__close{
-          font-size: 30px;
-          color: white;
-          &:hover{
-           color: red;
-          }
-    }
-  }
+.modal__ModalTitle{
+text-align: center;
+font-family: $fonttitle;
+}
+.modal__rrss span{
+  color: #00acee;
+}
+.modal__download{
+
+}
