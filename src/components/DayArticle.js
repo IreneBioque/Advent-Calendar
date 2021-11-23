@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Modal } from 'react-bootstrap';
+
 import "../styles/layout/_workArticle.scss";
 import no from "../images/NO.jpg";
 import "../styles/layout/_gift.scss";
+import ModalWindow from './ModalWindow';
+
 
 const DayArticle = (props) => {
   // TODO: ADD USE STATE TO SAVE PRESENT TO SHOW TO MODAL
@@ -23,12 +25,12 @@ const DayArticle = (props) => {
       <h3>{props.data.name}</h3>
       <div onClick={showModal}>
         <div className="container">
-          <div class="row">
-            <div class="div1">
-              <div class="box">
-                <div class="box-body">
+          <div className="row">
+            <div className="div1">
+              <div className="box">
+                <div className="box-body">
                   <img
-                    class="img"
+                    className="img"
                     src={
                       props.data.id === 1
                         ? props.data.img
@@ -36,8 +38,8 @@ const DayArticle = (props) => {
                     }
                     alt="gift"
                   />
-                  <div class="box-lid">
-                    <div class="box-bowtie"></div>
+                  <div className="box-lid">
+                    <div className="box-bowtie"></div>
                   </div>
                 </div>
               </div>
@@ -46,12 +48,7 @@ const DayArticle = (props) => {
         </div>
       </div>
       </div>
-      <Modal show={show} onHide={closeModal} id='modal'>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-      </Modal>
+      <ModalWindow show={show} closeModal={closeModal} />
     </article>
   );
 };

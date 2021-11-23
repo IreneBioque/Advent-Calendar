@@ -25,7 +25,7 @@ const Form = (props) => {
   return (
     <>
       <header className="headerForm">
-        <Link to="/calendar" className="headerForm__link">
+        <Link to="/" className="headerForm__link">
           Volver a atrás
         </Link>
         <h1 className="headerForm__title">Formulario de contacto</h1>
@@ -78,7 +78,7 @@ const Form = (props) => {
           Si prefieres ponerte en contacto con nosotros por Twitter te dejamos
           aquí abajo nuestros perfiles
         </p>
-        <div>{creators}</div>
+        <div className ="div_creators">{creators}</div>
       </section>
     </>
   );
