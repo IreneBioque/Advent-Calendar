@@ -1,5 +1,5 @@
 import DayArticle from "./DayArticle";
-import backgroundImage from "../images/christmas.jpg"
+
 
 const CalendarList = (props) => {
   const list = props.data.map((day) => {
