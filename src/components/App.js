@@ -15,8 +15,7 @@ import Participants from "./Participants";
 import JsonParticipants from "../data/participants.json";
 import Creators from "./Creators"
 import JsonCreators from "../data/creators.json"
-import Snowfall from 'react-snowfall';
-
+import Snowfall from "react-snowfall";
 
 const App = () => {
   const [data] = useState(Data);
@@ -48,19 +47,16 @@ const App = () => {
   });
   return (
     <div>
-      <Snowfall />
+      <Snowfall color='white' wind={[-0.5, 2.0]} snowflakeCount={200} style={{zIndex: 99999}} />
       <Switch>
         <Route exact path="/">
           <Landing />
         </Route>
         <Route exact path="/calendar">
           <Header />
-          <main className="main">
-            <CalendarList data={data} />
-          </main>
+          <CalendarList data={data} />
           <Footer />
         </Route>
-
         <Route path="/day/:id">
           <section>
             <DayDetail day={selectedDay} />
