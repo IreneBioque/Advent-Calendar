@@ -2,12 +2,9 @@ import { Link } from 'react-router-dom';
 import '../styles/layout/_workDetail.scss';
 import NotFoundPage from "./NotFoundPage";
 import ModalWindow from "./ModalWindow";
-import no from "../images/NO.jpg";
+
 const DayDetail = (props) => {
-  const technologies = props.day.tech.map((data) => {
-    return <li>{data}</li>;
-  });
-  if (props.day.day === true) {
+  if (props.day.id === 1) {
      return (
        <div className="detail" key={props.day.id}>
          <h1 className="titleDetail">{props.day.name}</h1>
@@ -33,7 +30,6 @@ const DayDetail = (props) => {
            <h3 className="workDetail__title">Sobre este proyecto</h3>
            <p className="workDetail__paragraph">{props.day.description}</p>
            <h3 className="workDetail__title">Tecnologías</h3>
-           <ul className="workDetail__list">{technologies}</ul>
            <h3 className="workDetail__title">Github</h3>
            <p className="workDetail__paragraph">
              Si quieres colaborar, darme alguna idea o ver el código del
@@ -50,7 +46,7 @@ const DayDetail = (props) => {
          </div>
        </div>
      );
-  } else if (props.day.day !== true) {
+  } else if (props.day.id !== 1) {
     return (
       <ModalWindow title={"Todavía no es el día"}>
       </ModalWindow>
