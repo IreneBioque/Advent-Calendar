@@ -3,11 +3,11 @@ import React, {useEffect, useState} from 'react';
 import DayArticle from "./DayArticle";
 
 
-const CalendarList = (props) => {
+const CalendarList = () => {
 
   const [data, setData] = useState([]);
 
-  const list = props.data.map((day) => {
+  const list = data.map((day) => {
     return (
       <li key={day.id}>
         <DayArticle data={day} />
