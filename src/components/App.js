@@ -1,5 +1,5 @@
 // Fichero src/components/App.js
-import {  useState, useEffect } from 'react';
+import {  useState } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/App.scss';
@@ -15,7 +15,7 @@ import Participants from "./Participants";
 import JsonParticipants from "../data/participants.json";
 import Creators from "./Creators"
 import JsonCreators from "../data/creators.json"
-
+import Snowfall from 'react-snowfall';
 
 
 const App = () => {
@@ -48,6 +48,7 @@ const App = () => {
   });
   return (
     <div>
+      <Snowfall />
       <Switch>
         <Route exact path="/">
           <Landing />
