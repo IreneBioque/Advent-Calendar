@@ -1,24 +1,18 @@
 import { Link } from "react-router-dom";
 import "../styles/layout/_modalwindow.scss";
 import no from "../images/NO.jpg";
+import { Modal } from 'react-bootstrap';
 
-function ModalWindow(props) {
+const ModalWindow =({show, closeModal}) => {
   return (
-    <div className="modal">
-      <div className="modal__page">
-        <div className="modal__content">
-          <header className="modalHeader">
-            <h2 className="modalHeader__title">{props.title}</h2>
-            <Link to="/calendar">
-              <i class="far fa-times-circle modalHeader__close"></i>
-            </Link>
-          </header>
-          <article>
-            <img src={no} alt="notday" className="modal__img" />
-          </article>
-        </div>
-      </div>
-    </div>
+    <Modal show={show} onHide={closeModal} id='modal'>
+    <Modal.Header closeButton>
+      <Modal.Title>Dia 1</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      {/* Aqui poner código que nos de la gana  */}
+      Woohoo, you're reading this text in a modal!</Modal.Body>
+  </Modal>
   );
 }
 
