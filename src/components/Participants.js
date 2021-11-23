@@ -7,7 +7,7 @@ const Participants = (props) => {
     return (
       <li key={participant.id} className="participantList__element">
         <h4>{participant.name}</h4>
-        <img src={participant.img} alt={participant.name} />
+        <img src={participant.img} alt={participant.name} className="participantList__element--img" />
         <p>{participant.description}</p>
         <a href={participant.twitter} target="_blank" rel="noreferrer">
           <i className="fab fa-twitter"></i>
