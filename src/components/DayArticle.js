@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import "../styles/layout/_workArticle.scss";
+import "../styles/layout/_dayArticle.scss";
 import no from "../images/NO.jpg";
 import "../styles/layout/_gift.scss";
 import ModalWindow from './ModalWindow';
@@ -20,7 +20,7 @@ const DayArticle = (props) => {
   // TODO: ADD USE EFFECT TO REQUEST TO API
 
   return (
-    <article>
+    <article className='articleCard'>
       <div className='presentCard'>
       <h3>{props.data.name}</h3>
       <div onClick={showModal}>
