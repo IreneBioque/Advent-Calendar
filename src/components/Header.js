@@ -18,7 +18,7 @@ const Header = () => {
           <Link to="/creators">Creadores</Link>
         </li>
         <li className="header__list--element">
-          <Link to="/form">Formulario</Link>
+          <Link to="/form">Contacto</Link>
         </li>
       </ul>
     </header>

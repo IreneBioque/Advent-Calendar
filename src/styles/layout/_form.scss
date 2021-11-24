@@ -1,5 +1,16 @@
+.sectionForm{
+    background-image: url(../../images/fondo6.png);
+    background-attachment: fixed;
+
+    @media (min-width: 1200px) {
+        height: 100vh;
+    }
+}
+
 .headerForm{
-    margin: 10px;
+    padding: 10px;
+    background-image: url(../../images/fondo6.png);
+    background-attachment: fixed;
     &__title{
         font-size: 40px;
         text-align: center;
@@ -12,6 +23,7 @@
 
 
 .form{
+    background-color: rgba(255, 255, 255, 0.50);
     display: grid;
     margin: 0 20px;
     &__label{
@@ -19,6 +31,7 @@
     }
     &__input{
         padding: 5px;
+        
     }
     &__button{
         margin: 10px 0;
@@ -26,5 +39,26 @@
     }
 }
 .contact{
-    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.50);
+    margin: 0 20px;
+    padding: 20px;
+    // margin-top: 40px;
+}
+
+.sectionCreators{
+    display: grid;
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__element{
+        margin: 40px;
+       
+        &--img{
+            height: 200px;
+            border-radius: 50%;
+        }
+    }
 }

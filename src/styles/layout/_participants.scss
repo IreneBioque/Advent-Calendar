@@ -1,10 +1,60 @@
-.participantList{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    &__element{
-        padding: 5px;
-        &--img{
-            border-radius: 50%;
+.participants{
+    background-image: url(../../images/fondo2.png);
+    background-attachment: fixed;
+    &__header{
+        background-image: url(../../images/fondo2.png);
+        background-attachment: fixed;
+       
+        padding: 10px;
+        &--title{
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+            
+            @media (min-width: 768px) {
+                font-size: 25px;
+            }
+            @media (min-width: 1200px) {
+                font-size: 35px;
+            }
         }
     }
+    &__list{
+        display: grid;
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &--element{
+            padding: 5px;
+             display: flex;
+             flex-direction: column;
+             background-color: rgba(255, 255, 255, 0.50);
+             border-radius: 10px;
+             margin: 10px;
+            &__header{
+                display: flex;
+                justify-content: space-between;
+            }
+            &__img{
+                border-radius: 50%;
+                height: 250px;
+                margin: auto;
+                @media (min-width: 1200px) {
+                    height: 350px;
+                }
+            }
+            &__text{
+                margin: 15px;
+                padding: 15px;
+                // background-color: rgba(255, 255, 255, 0.50);
+            }
+        }
+    }
+}
+.fa-twitter{
+    color: black;
 }

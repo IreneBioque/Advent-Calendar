@@ -18,8 +18,8 @@ const Creators = (props) => {
   return (
     <>
       <header className="creators__header">
-        <h1 className="creators__header--title">Creadores del calendario de adviento rolero</h1>
-        <Link to="/">Atrás</Link>
+      <Link to="/">Atrás</Link>
+        <h1 className="creators__header--title">Creadores</h1>
       </header>
       <main className="creators__main">
         <p>¡Somos 4 locos del rol al que se le ocurren ideas cortando patatas!</p>
