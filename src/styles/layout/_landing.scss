@@ -25,6 +25,9 @@
     &--list{
         font-size: 15px;
         display: flex;
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
        &__element{
         padding: 10px;
        }
