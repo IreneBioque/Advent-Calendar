@@ -32,9 +32,12 @@
             padding: 5px;
              display: flex;
              flex-direction: column;
+             background-color: rgba(255, 255, 255, 0.50);
+             border-radius: 10px;
+             margin: 10px;
             &__header{
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
             }
             &__img{
                 border-radius: 50%;
@@ -47,7 +50,7 @@
             &__text{
                 margin: 15px;
                 padding: 15px;
-                background-color: rgba(255, 255, 255, 0.50);
+                // background-color: rgba(255, 255, 255, 0.50);
             }
         }
     }
