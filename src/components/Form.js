@@ -14,8 +14,8 @@ const Form = (props) => {
   }
   const creators = props.data.map((creator) => {
     return (
-      <article>
-        <img src={creator.img} alt={creator.name} />
+      <article className ="sectionCreators__element">
+        <img src={creator.img} alt={creator.name} className ="sectionCreators__element--img" />
         <a href={creator.twitter} target="_blank" rel="noreferrer">
           <i className="fab fa-twitter"></i>
         </a>
@@ -23,7 +23,7 @@ const Form = (props) => {
     );
   })
   return (
-    <>
+    <div className="sectionForm">
       <header className="headerForm">
         <Link to="/" className="headerForm__link">
           Volver a atrás
@@ -78,9 +78,9 @@ const Form = (props) => {
           Si prefieres ponerte en contacto con nosotros por Twitter te dejamos
           aquí abajo nuestros perfiles
         </p>
-        <div className ="div_creators">{creators}</div>
+        <div className ="sectionCreators">{creators}</div>
       </section>
-    </>
+    </div>
   );
 };
 
