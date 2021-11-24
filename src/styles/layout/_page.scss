@@ -1,25 +1,41 @@
-
-.section_calendar{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);    
-}
-
-header {
-  background-color: white;
-  z-index: 99999999999;
-}
-
-#calendar::before {
+#calendar{
   content: "";
+  background-color: #AA2D36;
   background-image: url("../../images/fondo4.png");
-  background-size: cover;
-  position: absolute;
-  top: 60px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.75;  
-  max-height: 100%;
+  background-attachment: fixed;
 }
+.section__calendar{
+    display: grid;
+    padding: 10px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 1500px) {
+  grid-template-columns: repeat(4, 1fr);
+}
+  &--element{
+    padding: 20px;
+  }
+}
+
+// header {
+//   background-color: white;
+//   z-index: 99999999999;
+// }
+
+// #calendar::before {
+//   content: "";
+//   background-image: url("../../images/fondo4.png");
+//   background-size: cover;
+//   position: absolute;
+//   top: 60px;
+//   right: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   max-height: 100%;
+// }

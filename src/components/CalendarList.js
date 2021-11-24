@@ -8,7 +8,7 @@ const CalendarList = () => {
 
   const list = data.map((day) => {
     return (
-      <li key={day.id}>
+      <li key={day.id} className="section__calendar--element">
         <DayArticle data={day} />
       </li>
     );
@@ -25,7 +25,7 @@ const CalendarList = () => {
   return (
     <div>
       <section id="calendar">
-        <ul className="section_calendar">{list}</ul>
+        <ul className="section__calendar">{list}</ul>
       </section>
     </div>
   );

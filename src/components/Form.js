@@ -7,7 +7,6 @@ const Form = (props) => {
         return (
           <div>
             <p>¡Gracias! Te contestaremos lo antes posible </p>
-
             <Link to="/calendar">Volver a atrás</Link>
           </div>
         );

@@ -6,22 +6,16 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="header">
-      <Link to="/" className="header__paragraph">
-        Atrás
-      </Link>
-      <h1 className="header__title">Calendario de adviento rolero</h1>
-      <ul className="header__list">
-        <li className="header__list--element">
-          <Link to="/participants">Participantes</Link>
-        </li>
-        <li className="header__list--element">
-          <Link to="/creators">Creadores</Link>
-        </li>
-        <li className="header__list--element">
-          <Link to="/form">Contacto</Link>
-        </li>
-      </ul>
-    </header>
+    <div className="header__div"> 
+    <Link to="/" className="header__div--link">Volver a atrás</Link>
+    <h1 className="header__div--title">¡Te damos la bienvenida al calendario de adviento rolero!</h1>
+    </div>
+    <ul className="header--list">
+      <li className="header--list__element"><Link to="/form">Contacto</Link></li>
+      <li className="header--list__element"><Link to="/participants">Participantes</Link></li>
+      <li className="header--list__element"><Link to="/creators">Creadores</Link></li>
+    </ul>
+  </header>
   );
 };
 

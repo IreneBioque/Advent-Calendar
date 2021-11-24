@@ -3,36 +3,6 @@
     height: 100vh;
 }
 
-
-.landing__header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    font-family: 'Montserrat', sans-serif;
-    background-image: url(../../images/fondo4.png);
-    &--title{
-        font-size: 20px;
-        @media (min-width: 768px) {
-            font-size: 25px;
-        }
-        @media (min-width: 1200px) {
-            font-size: 35px;
-        }
-        text-align: center;
-        padding: 10px;
-    }
-    &--list{
-        font-size: 15px;
-        display: flex;
-        @media (min-width: 768px) {
-            font-size: 20px;
-        }
-       &__element{
-        padding: 10px;
-       }
-    }
-}
 .landing__main{
     display: flex;
     flex-direction: column;

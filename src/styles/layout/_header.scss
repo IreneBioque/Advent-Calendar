@@ -1,15 +1,38 @@
 .header {
-display: flex;
-justify-content: space-around;
-margin: 20px;
-&__title{
-    font-size: 30px;
-}
-&__list{
     display: flex;
-    align-items: flex-end;
-    &--element{
-        padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../../images/fondo4.png);
+    background-attachment: fixed;
+    &__div{
+        width: 100%;
+        &--link{
+           padding: 20px;
+        }
+        &--title{
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            @media (min-width: 768px) {
+                font-size: 25px;
+            }
+            @media (min-width: 1200px) {
+                font-size: 35px;
+            }
+        }
+    }
+
+    &--list{
+        font-size: 15px;
+        display: flex;
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
+       &__element{
+        padding: 10px;
+       }
     }
 }
-}
+

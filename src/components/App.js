@@ -55,7 +55,7 @@ const App = () => {
         <Route exact path="/calendar">
           <Header />
           <CalendarList data={data} />
-          <Footer />
+          {/* <Footer /> */}
         </Route>
         <Route path="/day/:id">
           <section>
