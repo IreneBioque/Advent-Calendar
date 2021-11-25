@@ -15,7 +15,7 @@ const DayArticle = (props) => {
 
   const closeModal = () => setShow(false);
 
-  function dayTest(){
+  const dayTest = () => {
     var dayT = new Date();
     dayT = dayT.getDate();
     if(dayT < props.data.day){
