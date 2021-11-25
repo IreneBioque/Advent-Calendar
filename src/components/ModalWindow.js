@@ -1,7 +1,27 @@
+import React from "react";
 import "../styles/layout/_modalwindow.scss";
 import { Modal } from 'react-bootstrap';
 
 const ModalWindow = ({ show, closeModal, data }) => {
+
+  const loadAuthor = () => {
+    var author = "";
+    if (data.autor.length > 1) {
+      for (var i = 0; i <= (data.autor.length - 1); i++) {
+        if (i === (data.autor.length - 2)) {
+          author += data.autor[i] + " y ";
+        } else if (i === (data.autor.length - 1)) {
+          author += data.autor[i];
+        } else {
+          author += data.autor[i] + ", ";
+        }
+      }
+    } else {
+      author = data.autor[0];
+    }
+    return author;
+  }
+  
   return (
     <Modal show={show} onHide={closeModal} id='modal'>
       <Modal.Header closeButton>
@@ -12,13 +32,19 @@ const ModalWindow = ({ show, closeModal, data }) => {
       <Modal.Body>
         <div className="modal__container">
           <div className="modal__header">
-            <h1>Hoy tenemos un regalo de {data.autor}</h1><br></br>
-            <h2>{data.title}</h2>
+            <h2>Hoy tenemos un regalo de {loadAuthor()}</h2><br></br>
+            <h3>{data.title}</h3>
           </div>
           <div className="modal__image"><img src={data.image} alt="Imagen del regalo"></img></div>
-          <h3 className="modal__description">{data.description}</h3>
-          <h3 className="modal__download"><button><a target="_blank" href={data.file} rel="noreferrer">Descarga del material</a></button></h3>
-          <h3 className="modal__rrss"><span className="fab fa-twitter"></span><a href={data.twitter}>{data.autor}</a></h3>
+          <p className="modal__description">{data.description}</p>
+          {/* eslint-disable-next-line react/jsx-no-target-blank */}
+          <p className="modal__download"><button><a target="_blank" href={data.file} >Descarga del material</a></button></p>
+          <p className="modal__rrss">{data.twitter.map((twitter, index) => (
+            <>
+              <span className="fab fa-twitter"></span>
+              <a href={twitter}>{data.autor[index]}</a>
+            </>
+          ))}</p>
         </div>
       </Modal.Body>
     </Modal>
