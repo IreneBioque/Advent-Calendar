@@ -48,7 +48,7 @@ const DayArticle = (props) => {
         </div>
       </div>
       </div>
-      <ModalWindow show={show} closeModal={closeModal} />
+      <ModalWindow show={show} closeModal={closeModal} data={props.data} />
     </article>
   );
 };
