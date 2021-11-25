@@ -51,7 +51,6 @@
   grid-column: 1 / 2;
   grid-row: 4 / 5;
   button {
-
     padding: 0.5rem;
     border-radius: 0.7rem;
   }
@@ -71,6 +70,11 @@
   place-self: center;
   grid-column: 2 / 3;
   grid-row: 4 / 5;
+
+  a{
+    color:black;
+  }
+
   span {
     color: #00acee;
   }
