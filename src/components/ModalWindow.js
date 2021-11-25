@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "../styles/layout/_modalwindow.scss";
-import no from "../images/NO.jpg";
 import { Modal } from 'react-bootstrap';
 
 const ModalWindow = ({ show, closeModal, data }) => {
@@ -21,7 +19,6 @@ const ModalWindow = ({ show, closeModal, data }) => {
     } else {
       author = data.autor[0];
     }
-    console.log(author);
     return author;
   }
 
@@ -41,7 +38,8 @@ const ModalWindow = ({ show, closeModal, data }) => {
           </div>
           <div className="modal__image"><img src={data.image} alt="Imagen del regalo"></img></div>
           <p className="modal__description">{data.description}</p>
-          <p className="modal__download"><button><a target="_blank" href={data.file}>Descarga del material</a></button></p>
+          {/* eslint-disable-next-line react/jsx-no-target-blank */}
+          <p className="modal__download"><button><a target="_blank" href={data.file} >Descarga del material</a></button></p>
           <p className="modal__rrss">{data.twitter.map((twitter, index) => (
             <>
               <span className="fab fa-twitter"></span>

@@ -1,6 +1,13 @@
-.creators__header{
-    padding: 10px;
+.creatorsContainer {
     background-image: url(../../images/fondo1.png);
+    background-attachment: fixed;
+
+}
+
+.creators__header{
+    background-color: rgba(255, 255, 255, 0.50);
+    margin-bottom: 4rem;
+    padding-bottom: 2.5rem;    
     background-attachment: fixed;
     @media (min-width: 768px) {
         padding: 20px;

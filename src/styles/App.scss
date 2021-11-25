@@ -3,3 +3,15 @@
 @import 'core/reset';
 @import 'components/links';
 @import 'layout/page';
+
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-image: url("../images/fondo4.png");
+  background-color: red;
+}

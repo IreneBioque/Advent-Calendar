@@ -16,7 +16,7 @@ const Creators = (props) => {
     );
   });
   return (
-    <>
+    <div className='creatorsContainer'>
       <header className="creators__header">
       <Link to="/">Atrás</Link>
         <h1 className="creators__header--title">Creadores</h1>
@@ -25,7 +25,7 @@ const Creators = (props) => {
         <p>¡Somos 4 locos del rol al que se le ocurren ideas cortando patatas!</p>
         <ul className="listCreators">{list}</ul>
       </main>
-    </>
+    </div>
   );
 };
 

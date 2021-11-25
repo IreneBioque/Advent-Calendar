@@ -1,14 +1,10 @@
-import { useState } from 'react';
-
+import React, { useState } from 'react';
 import "../styles/layout/_dayArticle.scss";
 import no from "../images/NO.jpg";
 import "../styles/layout/_gift.scss";
 import ModalWindow from './ModalWindow';
-import { func } from 'prop-types';
 
-const DayArticle = (props) => {
-  // TODO: ADD USE STATE TO SAVE PRESENT TO SHOW TO MODAL
-
+const DayArticle = ({ data }) => {
   const [show, setShow] = useState(false);
 
   const showModal = () => setShow(true);
@@ -18,20 +14,18 @@ const DayArticle = (props) => {
   const dayTest = () => {
     var dayT = new Date();
     dayT = dayT.getDate();
-    if(dayT < props.data.day){
+    if(dayT < data.day){
       alert("No es el día"); // TODO: ESTA ES LA LÍNEA QUE HAY QUE CAMBIAR PARA LANZAR EL MODAL DEL QUE NO ES EL DÍA
     } else{
       showModal();
     }
   }
 
-  // TODO: ADD USE EFFECT TO REQUEST TO API
-
   return (
     <article className='articleCard'>
       <div className='presentCard'>
-      <h3> Día {props.data.day}</h3>
-      <div onClick={dayTest}>
+      <h3> Día {data.day}</h3>
+      <div onClick={() => dayTest()}>
         <div className="container">
           <div className="row">
             <div className="div1">
@@ -40,8 +34,8 @@ const DayArticle = (props) => {
                   <img
                     className="img"
                     src={
-                      props.data.id === 1
-                        ? props.data.img
+                      data.id === 1
+                        ? data.img
                         : no
                     }
                     alt="gift"
@@ -56,7 +50,7 @@ const DayArticle = (props) => {
         </div>
       </div>
       </div>
-      <ModalWindow show={show} closeModal={closeModal} data={props.data} />
+      <ModalWindow show={show} closeModal={closeModal} data={data} />
     </article>
   );
 };
