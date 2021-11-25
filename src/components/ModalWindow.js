@@ -24,7 +24,8 @@ const ModalWindow = ({ show, closeModal, data }) => {
     console.log(author);
     return author;
   }
-  
+
+
   return (
     <Modal show={show} onHide={closeModal} id='modal'>
       <Modal.Header closeButton>
