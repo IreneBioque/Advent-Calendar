@@ -12,38 +12,37 @@
   height: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
-  align-content: stretch;
-  justify-content: stretch;
-  justify-items: stretch;
   font-family: $fontmain;
 }
 
 .modal__header {
-  place-self: center stretch;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-}
-
-.modal__image {
-  place-self: center stretch;
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
-  img{
-    width: 100%;
-    height: 100%;
+  h1{
+    font-size: large;
+    font-weight: bold;
+    font-variant:small-caps
+  }
+  h2{
+    font-weight:bold;
   }
 }
 
-.modal__title {
-  place-self: center stretch;
+.modal__image {
+  object-fit: contain;
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+  text-align: center;
+  img {
+    max-width: 60%;
+    max-height: 100%;
+  }
 }
 
 .modal__description {
-  place-self: center stretch;
   grid-column: 1 / 3;
   grid-row: 3 / 4;
+  text-align: justify;
 }
 
 .modal__download {
@@ -71,8 +70,8 @@
   grid-column: 2 / 3;
   grid-row: 4 / 5;
 
-  a{
-    color:black;
+  a {
+    color: black;
   }
 
   span {
