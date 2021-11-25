@@ -1,9 +1,11 @@
+@import '../core/variables';
+
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontmain;
     background-image: url(../../images/fondo4.png);
     background-attachment: fixed;
     &__div{
@@ -12,6 +14,8 @@
            padding: 20px;
         }
         &--title{
+            font-family: $fonttitle;
+            font-weight: bold;
             text-align: center;
             padding: 10px;
             font-size: 20px;
@@ -19,7 +23,7 @@
                 font-size: 25px;
             }
             @media (min-width: 1200px) {
-                font-size: 35px;
+                font-size: 45px;
             }
         }
     }
