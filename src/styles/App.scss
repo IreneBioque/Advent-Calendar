@@ -3,3 +3,8 @@
 @import 'core/reset';
 @import 'components/links';
 @import 'layout/page';
+
+canvas {
+  
+  height: 100% !important;
+}

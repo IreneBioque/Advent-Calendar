@@ -46,7 +46,7 @@ const App = () => {
   });
   return (
     <div>
-      <Snowfall color='white' wind={[-0.5, 2.0]} snowflakeCount={200} style={{zIndex: 99999}} />
+      <Snowfall color='white' wind={[-0.5, 2.0]} snowflakeCount={200} style={{zIndex: 99999, position: 'fixed' }} className='w-100' />
       <Switch>
         <Route exact path="/">
           <Landing />
@@ -54,7 +54,6 @@ const App = () => {
         <Route exact path="/calendar">
           <Header />
           <CalendarList data={data} />
-          {/* <Footer /> */}
         </Route>
         <Route path="/day/:id">
           <section>
