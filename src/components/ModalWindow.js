@@ -13,7 +13,7 @@ const ModalWindow = ({ show, closeModal, data }) => {
       </Modal.Header>
       <Modal.Body>
         <div className="modal__container">
-          <h1 className="modal__header">Hoy tenemos un regalo de {data.autor} {`(${data.pronombres})`}</h1>
+          <h1 className="modal__header">Hoy tenemos un regalo de {data.autor}</h1>
           <div className="modal__image"><img src={data.image} alt="Imagen del regalo"></img></div>
           <br></br>
           <h2 className="modal__title">Se trata de {data.title}</h2>
