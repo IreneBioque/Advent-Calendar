@@ -45,7 +45,7 @@ const App = () => {
     };
   });
   return (
-    <div>
+    <div className='h-100 mainDiv'>
       <Snowfall color='white' wind={[-0.5, 2.0]} snowflakeCount={200} style={{zIndex: 99999, position: 'fixed' }} className='w-100' />
       <Switch>
         <Route exact path="/">

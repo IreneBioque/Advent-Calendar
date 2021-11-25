@@ -6,24 +6,20 @@ import "../styles/layout/_gift.scss";
 import ModalWindow from './ModalWindow';
 
 
-const DayArticle = (props) => {
-  // TODO: ADD USE STATE TO SAVE PRESENT TO SHOW TO MODAL
- 
+const DayArticle = ({ data }) => { 
   const [show, setShow] = useState(false);
 
-
-
-  const showModal = () => setShow(true);
+  const showModal = () => {
+    setShow(true)
+  };
 
   const closeModal = () => setShow(false);
-
-  // TODO: ADD USE EFFECT TO REQUEST TO API
 
   return (
     <article className='articleCard'>
       <div className='presentCard'>
-      <h3>{props.data.name}</h3>
-      <div onClick={showModal}>
+      <h3>{data.name}</h3>
+      <div onClick={() => showModal(data.id)}>
         <div className="container">
           <div className="row">
             <div className="div1">
@@ -32,8 +28,8 @@ const DayArticle = (props) => {
                   <img
                     className="img"
                     src={
-                      props.data.id === 1
-                        ? props.data.img
+                      data.id === 1
+                        ? data.img
                         : no
                     }
                     alt="gift"
@@ -48,7 +44,7 @@ const DayArticle = (props) => {
         </div>
       </div>
       </div>
-      <ModalWindow show={show} closeModal={closeModal} data={props.data} />
+      <ModalWindow show={show} closeModal={closeModal} data={data} />
     </article>
   );
 };

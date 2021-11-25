@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import "../styles/layout/_modalwindow.scss";
-import no from "../images/NO.jpg";
 import { Modal } from 'react-bootstrap';
 
 const ModalWindow = ({ show, closeModal, data }) => {
@@ -19,7 +17,7 @@ const ModalWindow = ({ show, closeModal, data }) => {
           </div>
           <div className="modal__image"><img src={data.image} alt="Imagen del regalo"></img></div>
           <h3 className="modal__description">{data.description}</h3>
-          <h3 className="modal__download"><button><a target="_blank" href={data.file}>Descarga del material</a></button></h3>
+          <h3 className="modal__download"><button><a target="_blank" href={data.file} rel="noreferrer">Descarga del material</a></button></h3>
           <h3 className="modal__rrss"><span className="fab fa-twitter"></span><a href={data.twitter}>{data.autor}</a></h3>
         </div>
       </Modal.Body>

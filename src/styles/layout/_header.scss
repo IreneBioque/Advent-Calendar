@@ -6,7 +6,7 @@
     align-items: center;
     padding: 10px;
     font-family: $fontmain;
-    background-image: url(../../images/fondo4.png);
+    background-color: rgba(255, 255, 255, 0.50);
     background-attachment: fixed;
     &__div{
         width: 100%;
@@ -31,11 +31,16 @@
     &--list{
         font-size: 15px;
         display: flex;
+        margin: 3rem 0 1rem 0;
         @media (min-width: 768px) {
             font-size: 20px;
         }
        &__element{
         padding: 10px;
+
+        a {
+        color: rgb(0, 0, 0);
+        }
        }
     }
 }
