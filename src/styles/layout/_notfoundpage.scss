@@ -1,0 +1,13 @@
+.notFoundPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../images/fondo3.png);
+    &__text{
+        margin-bottom: 150px;
+        background-color: rgba(255, 255, 255, 0.50);
+        padding: 20px;
+    }
+}
