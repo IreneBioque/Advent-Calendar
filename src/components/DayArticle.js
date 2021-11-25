@@ -4,26 +4,34 @@ import "../styles/layout/_dayArticle.scss";
 import no from "../images/NO.jpg";
 import "../styles/layout/_gift.scss";
 import ModalWindow from './ModalWindow';
-
+import { func } from 'prop-types';
 
 const DayArticle = (props) => {
   // TODO: ADD USE STATE TO SAVE PRESENT TO SHOW TO MODAL
- 
+
   const [show, setShow] = useState(false);
-
-
 
   const showModal = () => setShow(true);
 
   const closeModal = () => setShow(false);
+
+  function dayTest(){
+    var dayT = new Date();
+    dayT = dayT.getDate();
+    if(dayT < props.data.day){
+      alert("No es el día"); // TODO: ESTA ES LA LÍNEA QUE HAY QUE CAMBIAR PARA LANZAR EL MODAL DEL QUE NO ES EL DÍA
+    } else{
+      showModal();
+    }
+  }
 
   // TODO: ADD USE EFFECT TO REQUEST TO API
 
   return (
     <article className='articleCard'>
       <div className='presentCard'>
-      <h3>{props.data.name}</h3>
-      <div onClick={showModal}>
+      <h3> Día {props.data.day}</h3>
+      <div onClick={dayTest}>
         <div className="container">
           <div className="row">
             <div className="div1">
