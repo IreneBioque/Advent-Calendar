@@ -10,7 +10,6 @@ import DayDetail from "./DayDetail";
 import { Data } from '../data/data';
 import NotFoundPage from './NotFoundPage'
 import Form from './Form';
-import Footer from './Footer';
 import Participants from "./Participants";
 import JsonParticipants from "../data/participants.json";
 import Creators from "./Creators"
