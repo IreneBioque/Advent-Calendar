@@ -12,8 +12,6 @@ const DayArticle = ({ data }) => {
 
   const[showNo, setShowNo] = useState(false);
 
-  const showModal = () => setShow(true);
-
   const showModalNo = () => setShowNo(true);
 
   const closeModal = () => setShow(false);
