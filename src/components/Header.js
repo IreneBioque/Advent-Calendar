@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="header">
-    <div className="header__div"> 
+    <div className="header__div">
     <Link to="/" className="header__div--link">Volver a atrás</Link>
     <h1 className="header__div--title">¡Te damos la bienvenida al calendario de adviento rolero!</h1>
     </div>

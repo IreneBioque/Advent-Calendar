@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/layout/_modalwindow.scss";
+import "../styles/layout/_modalwindowno.scss";
 import { Modal } from 'react-bootstrap';
 
 const ModalWindow = ({ show, closeModal, data }) => {
@@ -43,7 +43,7 @@ const ModalWindow = ({ show, closeModal, data }) => {
           <p className="modal__rrss">{data.twitter.map((twitter, index) => (
             <>
               <span className="fab fa-twitter"></span>
-              <a href={twitter}>{data.autor[index]}</a>
+              <a target="_blank" href={twitter}>{data.autor[index]}</a>
             </>
           ))}</p>
         </div>
