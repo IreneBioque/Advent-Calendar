@@ -1,0 +1,18 @@
+@import "./../core/variables";
+
+.modal__ModalTitle {
+    font-size: larger;
+    font-weight: bold;
+    font-family: $fonttitle;
+}
+
+.modal__body {
+    text-align: justify;
+    font-family: $fontmain;
+    h1,
+    h2 {
+        margin: 0 auto;
+        width: 80%;
+        font-size:x-large;
+    }
+}
