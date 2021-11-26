@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import "../styles/layout/_dayArticle.scss";
-import no from "../images/NO.jpg";
+import no from "../images/noChristmas.png";
 import "../styles/layout/_gift.scss";
 import ModalWindow from './ModalWindow';
 
@@ -9,6 +9,9 @@ const DayArticle = ({ data }) => {
   // const [day, setDay] = useState('');
   const showModal = () => setShow(true);
   const closeModal = () => setShow(false);
+  var dayT = new Date();
+  dayT = dayT.getDate();
+
 
 // Hemos intentado poner un fetch poara pillar el dia del año y que no puedan cambiar la fecha en el ordenador pero sale undefined,
 // si traes toda la data nos trae una movida que no entendemos xD. Auida Ari. Nos trae la movida de Madrid en network, pero no sabemo
@@ -22,16 +25,15 @@ const DayArticle = ({ data }) => {
 //     .catch((err) => console.log('Error fetching data:', err));
 //   }, [])
 // console.log(day)
+
   const dayTest = () => {
-    var dayT = new Date();
-    dayT = dayT.getDate();
     if(dayT < data.day){
       alert("No es el día"); // TODO: ESTA ES LA LÍNEA QUE HAY QUE CAMBIAR PARA LANZAR EL MODAL DEL QUE NO ES EL DÍA
     } else{
       showModal();
     }
   }
-
+console.log('Dayactual',dayT);
   return (
     <article className='articleCard'>
       <div className='presentCard'>
@@ -45,8 +47,8 @@ const DayArticle = ({ data }) => {
                   <img
                     className="img"
                     src={
-                      data.id === 1
-                        ? data.img
+                      data.day <= dayT
+                        ? data.image
                         : no
                     }
                     alt="gift"
