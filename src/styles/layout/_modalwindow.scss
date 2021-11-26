@@ -1,5 +1,11 @@
 @import "./../core/variables";
 
+
+.modalBackground{
+  background-color: rgba(0, 0, 0, 0.75);
+
+}
+
 .modal__ModalTitle {
   font-size: larger;
   font-weight: bold;
@@ -13,6 +19,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
   font-family: $fontmain;
+  
 }
 
 .modal__header {

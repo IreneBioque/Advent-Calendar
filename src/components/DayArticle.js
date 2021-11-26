@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import "../styles/layout/_dayArticle.scss";
 import no from "../images/NO.jpg";
 import "../styles/layout/_gift.scss";
@@ -6,11 +6,22 @@ import ModalWindow from './ModalWindow';
 
 const DayArticle = ({ data }) => {
   const [show, setShow] = useState(false);
-
+  // const [day, setDay] = useState('');
   const showModal = () => setShow(true);
-
   const closeModal = () => setShow(false);
 
+// Hemos intentado poner un fetch poara pillar el dia del año y que no puedan cambiar la fecha en el ordenador pero sale undefined,
+// si traes toda la data nos trae una movida que no entendemos xD. Auida Ari. Nos trae la movida de Madrid en network, pero no sabemo
+// que hacer con ello
+
+//   useEffect(() => {
+//     fetch('http://worldtimeapi.org/api/timezone/Europe/Madrid')
+//     .then((data) => {
+//       setDay(data);
+//     })
+//     .catch((err) => console.log('Error fetching data:', err));
+//   }, [])
+// console.log(day)
   const dayTest = () => {
     var dayT = new Date();
     dayT = dayT.getDate();

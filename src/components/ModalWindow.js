@@ -24,7 +24,7 @@ const ModalWindow = ({ show, closeModal, data }) => {
 
 
   return (
-    <Modal show={show} onHide={closeModal} id='modal'>
+    <Modal show={show} onHide={closeModal} id='modal'className="modalBackground">
       <Modal.Header closeButton>
         <Modal.Title>
           <h1 className="modal__ModalTitle">Día {data.day}</h1>
