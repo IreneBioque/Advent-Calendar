@@ -31,6 +31,7 @@
   }
   h2{
     font-weight:bold;
+    text-decoration:underline 2px;
   }
 }
 
@@ -60,14 +61,20 @@
     border-radius: 0.7rem;
   }
   a {
+    border: outset 1px  black;
+    border-radius: 1rem;
+    padding: 0.6rem;
+    background-color: #e7e7e7;
     text-decoration: none;
     color: black;
   }
-  button:hover {
+  a:hover{
+    border: outset 1px  #e7e7e7;
+    border-radius: 1rem;
+    padding: 0.6rem;
     background-color: black;
-    a {
-      color: white;
-    }
+    text-decoration: none;
+    color: white;
   }
 }
 
