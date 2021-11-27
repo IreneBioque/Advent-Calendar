@@ -1,5 +1,5 @@
 // Fichero src/components/App.js
-import React, {  useState, useEffect } from 'react';
+import React, {  useState } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/App.scss';
@@ -24,14 +24,15 @@ const App = () => {
   const selectedDay = data.find((day) => day.id === parseInt(DayId));
 
   const getSnowed = () => {
-    var flakes;
-    if(window.screen.width <= 425){
+    let flakes;
+
+    if (window.screen.width <= 425){
       flakes = 100;
-      return flakes;
-    } else{
+    } else {
       flakes = 200;
-      return flakes;
     }
+
+    return flakes;
   }
 
   // Datos participantes
