@@ -1,5 +1,5 @@
 // Fichero src/components/App.js
-import {  useState } from 'react';
+import React, {  useState, useEffect } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/App.scss';
@@ -22,6 +22,18 @@ const App = () => {
   const routeData = useRouteMatch("/day/:id");
   const DayId = routeData !== null ? routeData.params.id : "";
   const selectedDay = data.find((day) => day.id === parseInt(DayId));
+
+  const getSnowed = () => {
+    var flakes;
+    if(window.screen.width <= 425){
+      flakes = 100;
+      return flakes;
+    } else{
+      flakes = 200;
+      return flakes;
+    }
+  }
+
   // Datos participantes
   const [dataParticipants] = useState(JsonParticipants);
   const datafilteredParticipants = dataParticipants.participants.map((data) => {
@@ -46,7 +58,7 @@ const App = () => {
   });
   return (
     <div className='h-100 mainDiv'>
-      <Snowfall color='white' wind={[-0.5, 2.0]} snowflakeCount={200} style={{zIndex: 99999, position: 'fixed' }} className='w-100' />
+      <Snowfall color='white' wind={[-0.5, 2.0]} snowflakeCount={getSnowed()} style={{zIndex: 99999, position: 'fixed' }} className='w-100' />
       <Switch>
         <Route exact path="/">
           <Landing />
