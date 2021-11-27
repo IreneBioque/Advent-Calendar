@@ -14,9 +14,9 @@ const ModalWindowNo = ({ showNo, closeModal, data }) => {
       </Modal.Header>
       <Modal.Body>
         <div className="modal__body">
-            <h1>Siento ser yo quién te lo diga, pero te has equivocado. Este día todavía no está disponible.</h1>
-            <h2>Este regalo se desbloqueará el día {data.day}</h2>
-            <h2>Ten paciencia y disfruta del contenido anterior</h2>
+          <p>Siento ser yo quién te lo diga, pero te has equivocado.<br /> Este día todavía no está disponible, el regalo se desbloqueará el día {data.day}.<br />
+            Ten paciencia y disfruta del contenido anterior.</p>
+          <div><img src="https://media1.giphy.com/media/3ohzdQ1IynzclJldUQ/giphy.gif?cid=ecf05e471wia5dzjb26uyqwznem0rrg5ln4y97feocc43ekg&rid=giphy.gif&ct=g" alt="Imagen del regalo"></img></div>
         </div>
       </Modal.Body>
     </Modal>
