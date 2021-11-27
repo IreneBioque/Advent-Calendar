@@ -54,6 +54,6 @@ const DayDetail = (props) => {
   } else {
  return <NotFoundPage />;
   }
- 
+
 };
 export default DayDetail;
