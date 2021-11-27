@@ -10,6 +10,17 @@
     background-attachment: fixed;
     &__div{
         width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 14rem;
+        .logoContainer {
+            width: 10rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
         &--link{
            padding: 20px;
         }
@@ -31,7 +42,7 @@
     &--list{
         font-size: 15px;
         display: flex;
-        margin: 3rem 0 1rem 0;
+        margin: 0 0 1rem 0;
         @media (min-width: 768px) {
             font-size: 20px;
         }

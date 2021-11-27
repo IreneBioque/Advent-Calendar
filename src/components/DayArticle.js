@@ -1,47 +1,42 @@
 import React, {useEffect, useState} from 'react';
 import "../styles/layout/_dayArticle.scss";
-import no from "../images/noChristmas.png";
+import no from "../images/papanoel.png";
 import "../styles/layout/_gift.scss";
 import ModalWindow from './ModalWindow';
 import ModalWindowNo from './ModalWindowNo';
+import axios from 'axios';
 
 const DayArticle = ({ data }) => {
   const [show, setShow] = useState(false);
-  // const [day, setDay] = useState('');
-  const showModal = () => setShow(true);
+  const [day, setDay] = useState('');
+  const [showNo, setShowNo] = useState(false);
 
-  const[showNo, setShowNo] = useState(false);
+  const showModal = () => setShow(true);
 
   const showModalNo = () => setShowNo(true);
 
   const closeModal = () => setShow(false);
-  var dayT = new Date();
-  dayT = dayT.getDate();
-
-
-// Hemos intentado poner un fetch poara pillar el dia del año y que no puedan cambiar la fecha en el ordenador pero sale undefined,
-// si traes toda la data nos trae una movida que no entendemos xD. Auida Ari. Nos trae la movida de Madrid en network, pero no sabemo
-// que hacer con ello
-
-//   useEffect(() => {
-//     fetch('http://worldtimeapi.org/api/timezone/Europe/Madrid')
-//     .then((data) => {
-//       setDay(data);
-//     })
-//     .catch((err) => console.log('Error fetching data:', err));
-//   }, [])
-// console.log(day)
 
   const closeModalNo = () => setShowNo(false);
 
   const dayTest = () => {
-    if(dayT < data.day){
+    if(day < data.day){
       showModalNo(); // TODO: ESTA ES LA LÍNEA QUE HAY QUE CAMBIAR PARA LANZAR EL MODAL DEL QUE NO ES EL DÍA
     } else{
       showModal();
     }
   }
-console.log('Dayactual',dayT);
+
+  useEffect(() => {
+    axios.get('http://worldtimeapi.org/api/timezone/Europe/Madrid')
+    .then((response) => {
+      const datetime = response.data.datetime;
+      const date = new Date(datetime);
+      setDay(date.getDate());
+    })
+    .catch((err) => console.log('Error fetching data:', err));
+  }, [day])
+
   return (
     <article className='articleCard'>
       <div className='presentCard'>
@@ -55,7 +50,7 @@ console.log('Dayactual',dayT);
                   <img
                     className="img"
                     src={
-                      data.day <= dayT
+                      data.day <= day
                         ? data.image
                         : no
                     }
@@ -76,4 +71,5 @@ console.log('Dayactual',dayT);
     </article>
   );
 };
+
 export default DayArticle;

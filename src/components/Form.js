@@ -1,6 +1,9 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import { useForm } from "@formspree/react";
 import "../styles/layout/_form.scss";
+import mainImage from '../images/logo-calendario.png';
+
 const Form = (props) => {
     const [state, handleSubmit] = useForm("xoqygybv");
     if (state.succeeded) {
@@ -25,7 +28,9 @@ const Form = (props) => {
     <div className="sectionForm">
       <header className="headerForm">
         <Link to="/" className="headerForm__link">
-          Volver a atrás
+        <div className='logoContainer'>
+        <img src={mainImage} alt='Logo del calendario para volver a la página inicial' />
+      </div>
         </Link>
         <h1 className="headerForm__title">Formulario de contacto</h1>
       </header>

@@ -1,5 +1,8 @@
+import React from "react";
 import { Link } from "react-router-dom";
+import mainImage from '../images/logo-calendario.png';
 import "../styles/layout/_creators.scss";
+
 const Creators = (props) => {
   const list = props.datafiltered.map((creator) => {
     return (
@@ -18,7 +21,11 @@ const Creators = (props) => {
   return (
     <div className='creatorsContainer'>
       <header className="creators__header">
-      <Link to="/">Atrás</Link>
+      <Link to="/">
+        <div className='logoContainer'>
+          <img src={mainImage} alt='Logo del calendario para volver a la página inicial' />
+        </div>
+      </Link>
         <h1 className="creators__header--title">Creadores</h1>
       </header>
       <main className="creators__main">

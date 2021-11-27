@@ -5,10 +5,21 @@
 }
 
 .creators__header{
+    display: flex;
+    align-items: center;
+    gap: 35rem;    
     background-color: rgba(255, 255, 255, 0.50);
     margin-bottom: 4rem;
     padding-bottom: 2.5rem;    
     background-attachment: fixed;
+    .logoContainer {
+        width: 10rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
     @media (min-width: 768px) {
         padding: 20px;
     }
