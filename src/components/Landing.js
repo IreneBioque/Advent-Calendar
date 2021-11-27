@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import React from "react";
 import "../styles/layout/_landing.scss";
 import Header from './Header'
+
 const Landing = () => {
   return (
     <div className="landing">
@@ -10,9 +11,6 @@ const Landing = () => {
         <div className="landing__main--video">
         <iframe src="https://www.youtube.com/embed/hJresi7z_YM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <Link to="/calendar">
-          <button className="landing__main--button">Ir al calendario</button>
-        </Link>
       </main>
     </div>
   );

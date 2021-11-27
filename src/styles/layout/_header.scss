@@ -12,7 +12,34 @@
         width: 100%;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        justify-content: space-around;
+
+        .mainTitleContainer {
+            img {
+                width: 60rem;
+            }
+        }
+
+        .linkToCalendar {
+            margin-right: -2rem;
+            .landing__main--button {
+                padding: 1rem 1.9rem;
+                border-radius: 1rem;
+                background-color: rgb(67, 141, 67);
+                color: white;
+                border: none;
+                box-shadow: 5px 5px 11px -1px #000000;
+                font-size: 1.3em;
+                font-weight: bolder;
+
+                &:hover {
+                    background-color: rgb(17, 78, 17);
+                    text-decoration: underline;
+                }
+            }  
+        }
+        
+
         .logoContainer {
             width: 10rem;
 
