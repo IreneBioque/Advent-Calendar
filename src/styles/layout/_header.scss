@@ -1,4 +1,4 @@
-@import '../core/variables';
+@import "../core/variables";
 
 .header {
     display: flex;
@@ -6,9 +6,9 @@
     align-items: center;
     padding: 10px;
     font-family: $fontmain;
-    background-color: rgba(255, 255, 255, 0.50);
+    background-color: rgba(255, 255, 255, 0.5);
     background-attachment: fixed;
-    &__div{
+    &__div {
         width: 100%;
         display: flex;
         align-items: center;
@@ -36,22 +36,17 @@
                     background-color: rgb(17, 78, 17);
                     text-decoration: underline;
                 }
-            }  
-        }
-        
-
-        .logoContainer {
-            width: 10rem;
-
-            img {
-                width: 100%;
             }
         }
 
-        &--link{
-           padding: 20px;
+        .logoContainer {
+            width: 10rem;
         }
-        &--title{
+
+        &--link {
+            padding: 20px;
+        }
+        &--title {
             font-family: $fonttitle;
             font-weight: bold;
             text-align: center;
@@ -66,20 +61,63 @@
         }
     }
 
-    &--list{
+    &--list {
         font-size: 15px;
         display: flex;
         margin: 0 0 1rem 0;
         @media (min-width: 768px) {
             font-size: 20px;
         }
-       &__element{
-        padding: 10px;
+        &__element {
+            padding: 10px;
 
-        a {
-        color: rgb(0, 0, 0);
+            a {
+                color: rgb(0, 0, 0);
+            }
         }
-       }
     }
 }
+@media screen and (max-width: 500px) {
+    .header {
+        max-width: 100% !important;
+        height: 50%;
+        &--list {
+            margin: 0 !important;
+            padding: 0 !important;
+            text-align: center;
+        }
+    }
+    .header__div--link {
+        margin: 0 !important;
+        padding: 0 !important;
 
+        .logoContainer {
+            width: max-content;
+            object-fit: contain;
+            img {
+                max-width: 4rem;
+            }
+        }
+    }
+    .mainTitleContainer {
+        height: 10rem;
+        object-fit: contain;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .linkToCalendar {
+        width: 6rem;
+        height: 2rem;
+        margin: 0 !important;
+
+        .landing__main--button {
+            width: 100%;
+            height: 100%;
+            padding: 0.8rem !important;
+            font-size: 0.5em !important;
+            text-align: center;
+        }
+    }
+}
