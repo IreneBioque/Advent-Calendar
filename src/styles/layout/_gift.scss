@@ -6,8 +6,6 @@
   height: 300px;
   background-image: url('../../images/arbol.jpg');
   background-size: cover;
-//   background: rgb(131,164,129);
-// background: linear-gradient(355deg, rgba(131,164,129,1) 0%, rgba(102,172,100,0.75) 37%, rgba(102,172,100,0.75) 57%, rgba(152,193,151,1) 100%);
   border: solid white 3px;
   border-radius: 1rem;
 
@@ -15,7 +13,6 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
-    // background-color: rgba(0, 0, 0, 0.3); 
     height: 100%;
     border-radius: 1rem;
   }
@@ -27,9 +24,18 @@
 }
 
 #modal {
-  max-width: 850px !important;
+  @media screen and (min-width: 500px) {
+    max-width: 850px;
+  }
+  @media screen and (max-width: 500px) {
+    max-width: 570px;
+  }
   .modal-content {
     height: 40rem;
+    @media screen and (max-width: 500px) {
+      height: 78rem;
+      display: flex;
+    }
   }
 }
 

@@ -12,7 +12,7 @@ const Header = () => {
   useEffect(() => {
     let image;
 
-    if (window.screen.width <= 425){
+    if (window.screen.width <= 500){
       image = imageMovil;
     } else {
       image = imagePc;

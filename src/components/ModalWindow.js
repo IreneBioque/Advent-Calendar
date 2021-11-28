@@ -38,14 +38,16 @@ const ModalWindow = ({ show, closeModal, data }) => {
           </div>
           <div className="modal__image"><img src={data.image} alt="Imagen del regalo"></img></div>
           <p className="modal__description">{data.description}</p>
-          {/* eslint-disable-next-line react/jsx-no-target-blank */}
-          <p className="modal__download"><a target="_blank" href={data.file} >Descarga del material</a></p>
-          <p className="modal__rrss">{data.twitter.map((twitter, index) => (
-            <>
-              <span className="fab fa-twitter"></span>
-              <a target="_blank" href={twitter}>{data.autor[index]}</a>
-            </>
-          ))}</p>
+            {/* eslint-disable-next-line react/jsx-no-target-blank */}
+            <a className="modal__download" target="_blank" href={data.file}>
+              Descarga del material
+            </a>
+            <p className="modal__rrss">{data.twitter.map((twitter, index) => (
+              <>
+                <span className="fab fa-twitter"></span>
+                <a target="_blank" href={twitter} rel="noreferrer">{data.autor[index]}</a>
+              </>
+            ))}</p>
         </div>
       </Modal.Body>
     </Modal>
