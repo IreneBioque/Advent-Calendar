@@ -41,6 +41,9 @@
 
         .logoContainer {
             width: 10rem;
+            img{
+                width: 100%;
+            }
         }
 
         &--link {
@@ -79,45 +82,66 @@
 }
 @media screen and (max-width: 500px) {
     .header {
-        max-width: 100% !important;
-        height: 50%;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
         &--list {
             margin: 0 !important;
             padding: 0 !important;
             text-align: center;
         }
+        &__div {
+            max-width: 100%;
+            height: fit-content;
+            flex-wrap: wrap;
+        }
     }
+
     .header__div--link {
         margin: 0 !important;
         padding: 0 !important;
+        flex-basis: 10%;
+        height: 100%;
 
         .logoContainer {
-            width: max-content;
+            margin: 0 !important;
+            padding: 0 !important;
+            text-align: center;
+            width: 100%;
             object-fit: contain;
             img {
-                max-width: 4rem;
+                margin: 0 !important;
+                padding: 0 !important;
+                max-width: 100%;
             }
         }
     }
     .mainTitleContainer {
-        height: 10rem;
+        height: 100%;
         object-fit: contain;
+        flex-basis: 80%;
         img {
             max-width: 100%;
             max-height: 100%;
         }
     }
     .linkToCalendar {
-        width: 6rem;
-        height: 2rem;
+        width: 100%;
+        height: 100%;
         margin: 0 !important;
+        padding: 0 !important;
+        flex-basis: 95%;
+        text-align: center;
 
         .landing__main--button {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
             padding: 0.8rem !important;
-            font-size: 0.5em !important;
+            font-size: 1em !important;
             text-align: center;
         }
+    }
+    .header--list{
+        margin-top: 1rem !important;
     }
 }
