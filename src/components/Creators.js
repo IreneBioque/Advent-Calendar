@@ -29,7 +29,7 @@ const Creators = (props) => {
         <h1 className="creators__header--title">Creadores</h1>
       </header>
       <main className="creators__main">
-        <p>¡Somos 4 locos del rol al que se le ocurren ideas cortando patatas!</p>
+        <p className='textCreators'>¡Somos 4 locos del rol al que se le ocurren ideas cortando patatas!</p>
         <ul className="listCreators">{list}</ul>
       </main>
     </div>

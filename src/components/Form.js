@@ -72,7 +72,7 @@ const Form = (props) => {
         ></textarea>
         <input
           type="submit"
-          value="enviar"
+          value="Enviar"
           disabled={state.submitting}
           className="form__button"
         />

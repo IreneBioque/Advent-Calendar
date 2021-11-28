@@ -12,7 +12,7 @@ const Header = () => {
   useEffect(() => {
     let image;
 
-    if (window.screen.width <= 500){
+    if (window.screen.width <= 500) {
       image = imageMovil;
     } else {
       image = imagePc;
@@ -26,27 +26,27 @@ const Header = () => {
 
   return (
     <header className="header">
-    <div className="header__div">
-    <Link to="/" className="header__div--link">
-      <div className='logoContainer'>
-        <img src={mainImage} alt='Logo del calendario para volver a la página inicial' />
-      </div>
-    </Link>
-    <div className='mainTitleContainer'>
-      <img src={titleImage} alt='Calendario Rolero' />
-    </div>
-    {!window.location.href.includes('/calendar') ? (
-        <Link to="/calendar" className='linkToCalendar'>
-          <button className="landing__main--button">Ir al calendario</button>
+      <div className="header__div">
+        <Link to="/" className="header__div--link">
+          <div className='logoContainer'>
+            <img src={mainImage} alt='Logo del calendario para volver a la página inicial' />
+          </div>
         </Link>
-    ) : <div/>}
-    </div>
-    <ul className="header--list">
-      <li className="header--list__element"><Link to="/form">Contacto</Link></li>
-      <li className="header--list__element"><Link to="/participants">Participantes</Link></li>
-      <li className="header--list__element"><Link to="/creators">Creadores</Link></li>
-    </ul>
-  </header>
+        <div className='mainTitleContainer'>
+          <img src={titleImage} alt='Calendario Rolero' />
+        </div>
+        {!window.location.href.includes('/calendar') ? (
+          <Link to="/calendar" className='linkToCalendar'>
+            <button className="landing__main--button">Calendario</button>
+          </Link>
+        ) : <div />}
+      </div>
+      <ul className="header--list">
+        <li className="header--list__element"><Link to="/form">Contacto</Link></li>
+        <li className="header--list__element"><Link to="/participants">Participantes</Link></li>
+        <li className="header--list__element"><Link to="/creators">Creadores</Link></li>
+      </ul>
+    </header>
   );
 };
 
