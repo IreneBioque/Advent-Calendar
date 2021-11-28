@@ -26,7 +26,7 @@ const App = () => {
   const getSnowed = () => {
     let flakes;
 
-    if (window.screen.width <= 425){
+    if (window.screen.width <= 500){
       flakes = 100;
     } else {
       flakes = 200;
