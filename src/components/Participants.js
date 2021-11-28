@@ -15,7 +15,6 @@ const Participants = (props) => {
         </div>
         <img src={participant.img} alt={participant.name} className="participants__list--element__img" />
         <p className="participants__list--element__text">{participant.description}</p>
- 
       </li>
     );
   });
