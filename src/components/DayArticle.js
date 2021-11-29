@@ -28,7 +28,7 @@ const DayArticle = ({ data }) => {
   }
 
   useEffect(() => {
-    axios.get('http://worldtimeapi.org/api/timezone/Europe/Madrid')
+    axios.get('https://worldtimeapi.org/api/timezone/Europe/Madrid')
     .then((response) => {
       const datetime = response.data.datetime;
       const date = new Date(datetime);
