@@ -1,3 +1,5 @@
+@import "./../core/variables";
+
 .sectionForm{
     background-image: url(../../images/fondo6.png);
     background-attachment: fixed;
@@ -6,7 +8,7 @@
 .headerForm{
     display: flex;
     align-items: center;
-    gap: 35rem;
+    gap: 30%;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.50);
     margin-bottom: 4rem;
@@ -48,12 +50,12 @@
     background-color: rgba(255, 255, 255, 0.50);
     display: grid;
     margin: 0 20px;
+    font-family: $fontmain;
     &__label{
         margin: 5px 0;
     }
     &__input{
         padding: 5px;
-        
     }
     &__button{
         margin: 10px 0;
@@ -78,6 +80,7 @@
     background-color: rgba(255, 255, 255, 0.50);
     margin: 0 20px;
     padding: 20px;
+    font-family: $fontmain;
 }
 
 .sectionCreators{
