@@ -9,6 +9,7 @@ import axios from 'axios';
 const DayArticle = ({ data }) => {
   const [show, setShow] = useState(false);
   const [day, setDay] = useState('');
+  const [month, setMonth] = useState('');
   const [showNo, setShowNo] = useState(false);
 
   const showModal = () => setShow(true);
@@ -20,10 +21,10 @@ const DayArticle = ({ data }) => {
   const closeModalNo = () => setShowNo(false);
 
   const dayTest = () => {
-    if(day < data.day){
-      showModalNo(); // TODO: ESTA ES LA LÍNEA QUE HAY QUE CAMBIAR PARA LANZAR EL MODAL DEL QUE NO ES EL DÍA
+    if (data.day <= day && month === '12'){
+      showModal()
     } else{
-      showModal();
+      showModalNo(); // TODO: ESTA ES LA LÍNEA QUE HAY QUE CAMBIAR PARA LANZAR EL MODAL DEL QUE NO ES EL DÍA
     }
   }
 
@@ -33,6 +34,7 @@ const DayArticle = ({ data }) => {
       const datetime = response.data.datetime;
       const date = new Date(datetime);
       setDay(date.getDate());
+      setMonth(date.getMonth() + 1);
     })
     .catch((err) => console.log('Error fetching data:', err));
   }, [day])
@@ -50,7 +52,7 @@ const DayArticle = ({ data }) => {
                   <img
                     className="img"
                     src={
-                      data.day <= day
+                      data.day <= day && month === '12'
                         ? data.image
                         : no
                     }

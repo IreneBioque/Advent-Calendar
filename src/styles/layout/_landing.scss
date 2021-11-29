@@ -13,9 +13,16 @@
 }
 
 .landing__main--video{
-width: 80%;
-height: 80%;
-    padding: 1rem;
+    @media (min-width: 500px) {
+        width: 80%;
+        height: 80%;
+        padding: 1rem;
+    }
+    @media (max-width: 500px) {
+        width: 100%;
+        height: 90%;
+        padding: 0;
+    }
     iframe{
         width: 100%;
         height: 100%;
