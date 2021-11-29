@@ -5,6 +5,7 @@ import mainImage from '../images/logo-calendario.png';
 
 const Participants = (props) => {
   const list = props.datafiltered.map((participant) => {
+    console.log(participant);
     return (
       <li key={participant.id} className="participants__list--element">
         <div className="participants__list--element__header">
@@ -14,7 +15,10 @@ const Participants = (props) => {
         </a>
         </div>
         <img src={participant.img} alt={participant.name} className="participants__list--element__img" />
-        <p className="participants__list--element__text">{participant.description}</p>
+        <p className="participants__list--element__text">
+        {participant.description}
+        {participant.url && (<a target="_blank" style={{color: "black", textDecoration: "underline black"}} href={participant.url}>aqui</a>)}
+        </p>
       </li>
     );
   });
