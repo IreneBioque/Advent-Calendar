@@ -44,6 +44,7 @@ const App = () => {
       img: data.img,
       description: data.description,
       twitter: data.twitter,
+      url: data.url ? data.url : undefined,
     };
   });
   // Datos creadores
