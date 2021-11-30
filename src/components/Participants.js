@@ -17,7 +17,7 @@ const Participants = (props) => {
         <img src={participant.img} alt={participant.name} className="participants__list--element__img" />
         <p className="participants__list--element__text">
         {participant.description}
-        {participant.url && (<a target="_blank" style={{color: "black", textDecoration: "underline black"}} href={participant.url}>aqui</a>)}
+        {participant.url && (<a target="_blank" rel="noreferrer" style={{color: "black", textDecoration: "underline black"}} href={participant.url}>aqui</a>)}
         </p>
       </li>
     );
