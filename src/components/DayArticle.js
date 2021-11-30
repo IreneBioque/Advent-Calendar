@@ -24,7 +24,7 @@ const DayArticle = ({ data }) => {
     if (data.day <= day && month === '12'){
       showModal()
     } else{
-      showModalNo(); // TODO: ESTA ES LA LÍNEA QUE HAY QUE CAMBIAR PARA LANZAR EL MODAL DEL QUE NO ES EL DÍA
+      showModalNo();
     }
   }
 
