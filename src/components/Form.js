@@ -3,14 +3,25 @@ import { Link } from "react-router-dom";
 import { useForm } from "@formspree/react";
 import "../styles/layout/_form.scss";
 import mainImage from '../images/logo-calendario.png';
+import thanks from '../images/thanks.png'
 
 const Form = (props) => {
     const [state, handleSubmit] = useForm("xoqygybv");
     if (state.succeeded) {
         return (
-          <div>
-            <p>¡Gracias! Te contestaremos lo antes posible </p>
-            <Link to="/calendar">Volver a atrás</Link>
+          <div className="sectionThanks">
+            <p className="sectionThanks__paragraph">
+              ¡Gracias! Te contestaremos lo antes posible{" "}
+            </p>
+            <img
+              src={thanks}
+              title="thanksimage"
+              alt="thanksimage"
+              className="sectionThanks__img"
+            />
+            <Link to="/calendar">
+              <button className="sectionThanks__button">Volver atrás</button>
+            </Link>
           </div>
         );
   }
