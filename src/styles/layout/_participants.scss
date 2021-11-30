@@ -6,7 +6,7 @@
     &__header{
         display: flex;
         align-items: center;
-        gap: 36%;
+        gap: 30%;
         background-color: rgba(255, 255, 255, 0.50);
         margin-bottom: 4rem;
         padding-bottom: 2rem;
@@ -19,7 +19,9 @@
             align-items: center;
             gap: unset;
         }
-
+        @media (max-width: 1200px) {
+            gap: 13%;
+        }
         .logoContainer {
             width: 10rem;
             margin-left: 2rem;
@@ -32,16 +34,15 @@
         }
 
         &--title{
+            font-family: $fonttitle;
             text-align: center;
             font-weight: bold;
             font-size: 40px;
-
-
-            @media (min-width: 768px) {
-                font-size: 25px;
+        @media (min-width: 768px) {
+                font-size: 50px;
             }
             @media (min-width: 1200px) {
-                font-size: 35px;
+                font-size: 80px;
             }
         }
     }
