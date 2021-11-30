@@ -9,10 +9,14 @@
     background-image: url(../../images/fondo3.png);
     font-family: $fontmain;
     &__text{
-        margin-bottom: 150px;
-        background-color: rgba(255, 255, 255, 0.50);
+         margin: 100px 15px;
+        background-color: rgba(255, 255, 255, 0.70);
         padding: 20px;
         text-align: center;
+        font-size: 1.3em;
+             @media (min-width: 1200px) {
+    font-size: 1.5em;
+             }
     
     }
     &__img{
@@ -21,7 +25,7 @@
          @media (min-width: 1200px) {
         height: 500px;
         margin-bottom: 80px;
-    }
+        }
     }
     &__button{
          padding: 1rem 1.9rem;
