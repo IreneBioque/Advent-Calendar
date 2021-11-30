@@ -15,6 +15,7 @@
     margin-bottom: 4rem;
     padding-bottom: 2.5rem;
     background-attachment: fixed;
+    
     .logoContainer {
         width: 10rem;
 
@@ -30,13 +31,20 @@
         align-items: center;
         gap: unset;
     }
+    @media (max-width: 1200px) {
+        gap: 13%;
+    }
+    @media (min-width: 1200px) {
+       padding-left: 20px;
+    }
 
     &--title{
+        font-family: $fonttitle;
         text-align: center;
         font-weight: bold;
         font-size: 40px;
         @media (min-width: 768px) {
-            font-size: 40px;
+            font-size: 80px;
         }
     }
 }
