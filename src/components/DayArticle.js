@@ -21,7 +21,7 @@ const DayArticle = ({ data }) => {
   const closeModalNo = () => setShowNo(false);
 
   const dayTest = () => {
-    if (data.day <= day && month === '12'){
+    if (data.day <= day){
       showModal()
     } else{
       showModalNo();
