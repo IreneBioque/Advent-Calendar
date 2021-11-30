@@ -52,7 +52,7 @@ const DayArticle = ({ data }) => {
                   <img
                     className="img"
                     src={
-                      data.day <= day && month === '12'
+                      data.day <= day
                         ? data.image
                         : no
                     }
