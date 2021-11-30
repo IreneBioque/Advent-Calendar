@@ -15,6 +15,7 @@
     margin-bottom: 4rem;
     padding-bottom: 2.5rem;
     background-attachment: fixed;
+            
     
     .logoContainer {
         width: 10rem;
@@ -55,6 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   
     p{
         font-family: $fontmain;
         font-size: x-large;
@@ -85,8 +87,9 @@
         border-radius: 10px;
         &--text{
             text-align: center;
-           margin: 5px 0;
-           font-size: 20px;
+            margin: 5px 0;
+            font-size: 40px;
+            font-family: $fonttitle;
         }
         &--img{
             border-radius: 50%;
