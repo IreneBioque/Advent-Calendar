@@ -36,7 +36,11 @@ const DayArticle = ({ data }) => {
       setDay(date.getDate());
       setMonth(date.getMonth() + 1);
     })
-    .catch((err) => console.log('Error fetching data:', err));
+    .catch((err) => {
+      const localTime = new Date();
+      setDay(localTime.getDate());
+      setMonth(localTime.getMonth() + 1);
+    });
   }, [day])
 
   return (
