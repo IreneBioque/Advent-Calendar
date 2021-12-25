@@ -42,6 +42,7 @@ const Header = () => {
         ) : <div />}
       </div>
       <ul className="header--list">
+      <li className="header--list__element"><a target="_blank" href="https://drive.google.com/drive/folders/1iuJu-OWLRAv09AluBGPDTLbZlalGt8gY?usp=sharing">Descarga completa</a></li>
         <li className="header--list__element"><Link to="/form">Contacto</Link></li>
         <li className="header--list__element"><Link to="/participants">Participantes</Link></li>
         <li className="header--list__element"><Link to="/creators">Creadores</Link></li>
