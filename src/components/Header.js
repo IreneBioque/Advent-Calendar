@@ -22,8 +22,6 @@ const Header = () => {
 
   }, [setTitleImage])
 
-  console.log('window.location.href', window.location.href)
-
   return (
     <header className="header">
       <div className="header__div">
