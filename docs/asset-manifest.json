@@ -1,22 +1,36 @@
 {
   "files": {
-    "main.css": "./static/css/main.ee0941db.chunk.css",
-    "main.js": "./static/js/main.08e69fa7.chunk.js",
-    "main.js.map": "./static/js/main.08e69fa7.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.3976f0fa.js",
-    "runtime-main.js.map": "./static/js/runtime-main.3976f0fa.js.map",
-    "static/js/2.24b9abb4.chunk.js": "./static/js/2.24b9abb4.chunk.js",
-    "static/js/2.24b9abb4.chunk.js.map": "./static/js/2.24b9abb4.chunk.js.map",
+    "main.css": "./static/css/main.f3ce7832.chunk.css",
+    "main.js": "./static/js/main.8ed915b2.chunk.js",
+    "main.js.map": "./static/js/main.8ed915b2.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.dcec08cf.js",
+    "runtime-main.js.map": "./static/js/runtime-main.dcec08cf.js.map",
+    "static/css/2.0a9ec390.chunk.css": "./static/css/2.0a9ec390.chunk.css",
+    "static/js/2.3f600474.chunk.js": "./static/js/2.3f600474.chunk.js",
+    "static/js/2.3f600474.chunk.js.map": "./static/js/2.3f600474.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.ee0941db.chunk.css.map": "./static/css/main.ee0941db.chunk.css.map",
-    "static/js/2.24b9abb4.chunk.js.LICENSE.txt": "./static/js/2.24b9abb4.chunk.js.LICENSE.txt",
-    "static/media/NO.763d2f4f.jpg": "./static/media/NO.763d2f4f.jpg",
-    "static/media/_gift.scss": "./static/media/papelNavidad.63b803e6.png"
+    "static/css/2.0a9ec390.chunk.css.map": "./static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.f3ce7832.chunk.css.map": "./static/css/main.f3ce7832.chunk.css.map",
+    "static/js/2.3f600474.chunk.js.LICENSE.txt": "./static/js/2.3f600474.chunk.js.LICENSE.txt",
+    "static/media/404.efde6841.png": "./static/media/404.efde6841.png",
+    "static/media/_gift.scss": "./static/media/arbol.31a27026.jpg",
+    "static/media/_creators.scss": "./static/media/fondo1.9690f097.png",
+    "static/media/_participants.scss": "./static/media/fondo2.6c99ca97.png",
+    "static/media/_notfoundpage.scss": "./static/media/fondo3.a5482fa3.png",
+    "static/media/_landing.scss": "./static/media/fondo4.8487b134.png",
+    "static/media/_form.scss": "./static/media/fondo6.254fda64.png",
+    "static/media/logo-calendario.f04b6a76.png": "./static/media/logo-calendario.f04b6a76.png",
+    "static/media/papanoel.4bdf07d5.png": "./static/media/papanoel.4bdf07d5.png",
+    "static/media/_dayArticle.scss": "./static/media/papelNavidad.63b803e6.png",
+    "static/media/thanks.2ffe8a73.png": "./static/media/thanks.2ffe8a73.png",
+    "static/media/titulomovil.2c4769f2.png": "./static/media/titulomovil.2c4769f2.png",
+    "static/media/tituloweb.a3b932a4.png": "./static/media/tituloweb.a3b932a4.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.3976f0fa.js",
-    "static/js/2.24b9abb4.chunk.js",
-    "static/css/main.ee0941db.chunk.css",
-    "static/js/main.08e69fa7.chunk.js"
+    "static/js/runtime-main.dcec08cf.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.3f600474.chunk.js",
+    "static/css/main.f3ce7832.chunk.css",
+    "static/js/main.8ed915b2.chunk.js"
   ]
 }
