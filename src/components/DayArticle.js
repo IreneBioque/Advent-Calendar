@@ -24,7 +24,7 @@ const DayArticle = ({ data }) => {
     if (data.day <= day){
       showModal()
     } else{
-      showModalNo();
+      showModal();
     }
   }
 
