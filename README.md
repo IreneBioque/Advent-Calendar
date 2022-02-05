@@ -105,6 +105,7 @@ And then:
 - HTML
 - SASS
 - REACT
+- MONGODB
 - BOOTSTRAP
 
 ## Autores ✒️ / Authors ✒️
