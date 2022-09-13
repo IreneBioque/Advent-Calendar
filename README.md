@@ -1,7 +1,7 @@
 # Calendario de adviento rolero 🎅📅
 
 ¡Bienvenidos al calendario de adviento rolero!
-Este proyeccto se creó con mucha ilusión para poder ofrecer material de rol de forma gratuita a todo el mundo. 
+Este proyecto se creó con mucha ilusión para poder ofrecer material de rol de forma gratuita a todo el mundo. 
 El material que incluye, se ha cedido gratuitamente por parte de creadores de contenido. 
 Cada día de diciembre se va abriendo un nuevo regalo. Después de diciembre, todos los días están abiertos para que todo el mundo pueda disfrutar de todos los regalos. Como sabemos que, una vez pasado diciembre, y quieres disfrutar de todo, puede ser un poco incómodo ir abriendo día a día, hemos implementado una página para descargar todo el material del año 2020. 
 ¡Esperamos que lo disfruteis!
